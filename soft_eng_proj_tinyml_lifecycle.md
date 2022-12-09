@@ -42,7 +42,7 @@ At this stage, there is need to build a component that operates over the model t
 
 ### Model splitting
 
-**I don't get what you mean here with model splitting**
+At the prvious "Model squuzing" stage, some big model cannot be squeezed small enough to fit in the target device resources. In that case, the original model needs to be split into multiple part either in sequentially or parallel to achieve the original purpose.
 
 ### Model deployment
 
