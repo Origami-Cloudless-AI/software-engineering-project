@@ -7,7 +7,7 @@ devices, without compromising their energy efficiency, is called
 Tiny Machine Learning (TinyML). TinyML encompasses very resource-constrained hardware, software, ML algorithms, compilers, and tools to squeeze a ML model into a few kilobyte
 of memory. As these hardware platforms, compilers, and software tools are often tied to a specific vendor, the lack of interoperability among different solutions may undermine the other benefits deriving by the use of TinyML. To cope with this issue, we have recently proposed [TinyML as-a-Service (TinyMLaaS)](https://www.researchgate.net/profile/Roberto-Morabito-2/publication/351533707_A_TinyMLaaS_Ecosystem_for_Machine_Learning_in_IoT_Overview_and_Research_Challenges/links/60e5613a92851c2b83e5090e/A-TinyMLaaS-Ecosystem-for-Machine-Learning-in-IoT-Overview-and-Research-Challenges.pdf), a cloud- or edge- based service that simplifies the deployment of ML models into constrained devices and guarantees the desired interoperability.
 
-In the context of the [University of Helsinki Nexus Incubator Program](https://www.helsinki.fi/en/networks/helsinki-incubators/incubators/nexus-deep-tech-ai-sustainability), we established Origami, whose goal is to build a software solution around the TinyMLaaS concept.
+In the context of the [University of Helsinki Nexus Incubator Program](https://www.helsinki.fi/en/networks/helsinki-incubators/incubators/nexus-deep-tech-ai-sustainability), we established the team, **Origami**, whose goal is to build a software solution around the TinyMLaaS concept.
 
 
 # Project Proposal:
