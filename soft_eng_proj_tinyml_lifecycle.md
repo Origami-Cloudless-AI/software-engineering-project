@@ -56,7 +56,7 @@ The *model deployment* consists in the process of placing a finished machine lea
 
 ### Model update
 
-In this final phase of the lifecycle, the goal is to develop a Software Over The Air (SOTA) update feature that allows to seamlessly update a ML model in the targeted TinyML device.
+In this final phase of the lifecycle, the goal is to develop a Software Over The Air (SOTA) update feature that allows to seamlessly update a ML model in the targeted TinyML device. The operational dash board could be implemented in the form of SaaS.
 
 # Additional support from the mentors:
 
