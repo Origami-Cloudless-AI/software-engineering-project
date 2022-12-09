@@ -48,7 +48,7 @@ At this stage, there is need to build a component that operates over the model t
 
 ### Model splitting
 
-At the prvious "Model squuzing" stage, some big model cannot be squeezed small enough to fit in the target device resources. In that case, the original model needs to be split into multiple part either in sequentially or parallel to achieve the original purpose.
+Giving the resources constraints of some devices and the requirements of certain AI applications, there are cases in which the AI model cannot be squeezed enough to fit in to the targeted TinyML-enabled device. To cope with such limitation, the framework can embed a functionality that optimally splits the original model in multiple parts so as to make fitting part of the model into the constrained device and the remaining part in more capable computing environments.
 
 ### Model deployment
 
