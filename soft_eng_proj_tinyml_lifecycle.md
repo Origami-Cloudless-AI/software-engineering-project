@@ -9,6 +9,8 @@ of memory. As these hardware platforms, compilers, and software tools are often 
 
 In the context of the [University of Helsinki Nexus Incubator Program](https://www.helsinki.fi/en/networks/helsinki-incubators/incubators/nexus-deep-tech-ai-sustainability), we established Origami, whose goal is to build a software solution around the TinyMLaaS concept.
 
+![TinyMLaaS](TinyMLaaS_one_pager.png)
+
 
 # Project Proposal:
 
