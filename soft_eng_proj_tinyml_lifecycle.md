@@ -1,4 +1,4 @@
-% TinyML lifecycle management
+% Seamless TinyML lifecycle management
 % [Roberto Morabito](mailto:roberto.morabito@helsinki.fi);[Hiroshi Doyu](mailto:hiroshi.doyu@gmail.com)
 % \today
 
