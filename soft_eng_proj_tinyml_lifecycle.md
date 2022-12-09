@@ -1,3 +1,7 @@
+% TinyML lifecycle management
+% [Roberto Morabito](mailto:roberto.morabito@helsinki.fi);[Hiroshi Doyu](mailto:hiroshi.doyu@gmail.com)
+% \today
+
 # Background:
 
 The pervasive use of Machine Learning (ML) algorithms, as well as of the enhanced AI processing-enabled software and hardware components led us to think that the traditional cloud-based AI lifecycle can nearly always be the right recipe for ensuring a seamless and efficient AI processing. But is this really the case? The strong dependency on the use of cloud and specialized processing technologies (e.g., GPU) of the modern ML toolchains naturally limits the ML reachability and usability. Edge AI has tried to reduce the dependency from these technologies, by enabling more viable, user-friendly, and out-of-the box AI processing deployments. However, the dependency on connectivity and the lack of 'plug and play' interoperability among different AI-enabled edge devices, negatively counterbalance the benefits generated.
