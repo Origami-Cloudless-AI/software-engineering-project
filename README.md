@@ -5,13 +5,16 @@
 - 15 hours / week / student is expeted.
 - 14 weeks (week 3-16) is scheduled.
   - 15 hours * 14 weeks * 5 students == 1050 hours / 7.5 hour == 140 man days / 22 == 6.4 man month.
-  - @Michi, how to estimate SBI workload in unit? (e.g. 3 hours, 7.5 hours or 15 hours)
+  - @Michi, which unit for SBI workload? (e.g. 3 hours, 7.5 hours or 15 hours)
 - NEXUS Demo day is on 27th March on week 13
-  - week 3-12 == 10 weeks
+  - week 3-16 == 14 weeks, originally
+  - week 3-12 == 10 weeks, ideally
   - Should we ask to squash this by week 12 (10 weeks)?
-  - (1050/14/5== 15 hours) vs (1050/12/5 == 17.5 hours) vs (1050/10/5 == 21 hours)
+    - 15 hours * 14 weeks == 210 hours
+    - 210 hours == 15 hours/week, originally
+    - 210 hours / 12 weeks == 17.5 hours/week
+    - 210 hours / 10 weeks  == 21 hours/week, ideally
   - ~~@Hiroshi to negotiate with Matti and each student~~
-
 
 # Project goal
 We will reproduce [Roberto's demo video](https://youtu.be/xYntGeLmCSI), adding its ML training phase, towards NEXUS Demo day (27th March).
