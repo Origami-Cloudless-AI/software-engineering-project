@@ -19,10 +19,10 @@ While Roberto's demo uses relatively large hardwares which may not belong to Tin
 those hardwares (e.g. Jetson nano) usually come with a raedy made toolstack to run ML examples immediately.
 There are 2 benefits of making use of Roberto's demo for this project.
 Firstly, we could learn from those mature toolstack what kind of toolstack is still missing to implement TinyMLaaS in the future.
-Sencondary, we could make the existing demo more fancy quickly to attract investoers attending NEXUS Demo day.
+Sencondary, we could make this existing demo more fancy quickly to attract investoers attending NEXUS Demo day.
 
 
-# Preparation for 16th kick-off
+# Preparation for 16th JAN kick-off
 
 ## What should we do on 16th?
 - Get familiar with all participants
@@ -30,7 +30,6 @@ Sencondary, we could make the existing demo more fancy quickly to attract invest
   - I want to understand their preference & skill level too.
 - Explain the [Project goal](#project-goal)
   - Should we share the [demo video](https://youtu.be/xYntGeLmCSI) in advance?
-  - @Roberto, can we map 7 of each Seamless TinyML lifecycle management's phase on this demo? although a training phase is completely missing.
 - Set up a SCRUM team (e.g. specify each role in the project)
   - SM: Michi + a Univ guy
   - PO: Roberto
@@ -39,6 +38,8 @@ Sencondary, we could make the existing demo more fancy quickly to attract invest
   - Customer: ??? @Michi
 - User story mapping
   - Specify PBIs
+  - Estimate PBI effort
+  - Specify acceptance tests
   - @Michi, PBI==SPI? If not why?
 - 1st sprint planning should be done on 16th.
 
@@ -50,24 +51,28 @@ Sencondary, we could make the existing demo more fancy quickly to attract invest
 - 1 increment == 1 sprint?
 - 1st sprint should have some [Architecture investigation](#architecture-investigation) to find out which components are reusable
 - 1st sprint should have a ZFR (Zero Feature Release) to make sure that CI/CD works on Github workflow (action) without any features (or just with existing components)
-- Should we run CI/CD to reproduce the current Roberto's demo story at first, without the training part?
+- Should we run CI/CD to reproduce the current Roberto's demo story at first, without a training part?
 
 
 ### Architecture investigation
 - How should we understand Roberto's demo architecture?
-  - architecutre document?
-  - architecutre block diagram?
-  - flow diagram?
-- We should understand Roberto's demo's components, which could be reused and which not, since the outcome of this project would be opensource'ed.
-- We should understand which software frameworks Roberto's demo's components uses.
+  - Any architecutre document?
+  - Any architecutre block diagram?
+  - Any flow diagram?
+  - Any list of components used? which could be reused and which not, since the outcome of this project would be opensource'ed.
+  - Any list of software frameworks each components uses?
 - Should we map each Seamless TinyML lifecycle management's phase on this demo scenario?
-  1. Data collection
-  2. Model training
-  3. Model squeezing for targeting TinyML-enabled devices
-  4. Model splitting
-  5. Model deployment
-  6. Model update
 - Should we make sure which phases are still missing? (e.g. "2. Model trainig")
+
+Phase # | Name | Roberto's demo
+:---:|:---|:---
+1| Data collection |
+2| Model training |
+3| Model squeezing |
+4| Model splitting |
+5| Model deployment |
+6| Model update |
+
 
 # Questions
 - What's the main purpose of this project from students' perspective? (e.g. experience Agile development)
