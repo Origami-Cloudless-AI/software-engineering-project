@@ -1,8 +1,8 @@
 # Software Engineering Project in Helsinki University CS
 - Here's the original [announcement](https://study.cs.helsinki.fi/projekti/topics/create)
 - Here's [our proposal](https://github.com/Origami-TinyML/software-engineering-project/blob/main/soft_eng_proj_tinyml_lifecycle.md)
-- 5 studens are assigned to our project, no info for their skill level yet.
-- 15 hours / week / student is expeted.
+- 5 students are assigned to our project, no info for their skill level yet.
+- 15 hours / week / student is expected.
 - 14 weeks (week 3-16) is scheduled.
   - 15 hours * 14 weeks * 5 students == 1050 hours / 7.5 hour == 140 man days / 22 == 6.4 man month.
   - @Michi, which unit for SBI workload? (e.g. 3 hours, 7.5 hours or 15 hours)
@@ -18,11 +18,11 @@
 
 # Project goal
 We will reproduce [Roberto's demo video](https://youtu.be/xYntGeLmCSI), adding its ML training phase, towards NEXUS Demo day (27th March).
-While Roberto's demo uses relatively large hardwares which may not belong to TinyML precisely (e.g. TinyML run on RTOS but not on Linux),
-those hardwares (e.g. Jetson nano) usually come with a raedy made toolstack to run ML examples immediately.
+While Roberto's demo uses relatively large hardware which may not belong to TinyML precisely (e.g. TinyML run on RTOS but not on Linux),
+those hardware (e.g. Jetson nano) usually come with a ready made tool-stack to run ML examples immediately.
 There are 2 benefits of making use of Roberto's demo for this project.
-Firstly, we could learn from those mature toolstack what kind of toolstack is still missing to implement TinyMLaaS in the future.
-Sencondary, we could make this existing demo more fancy quickly to attract investoers attending NEXUS Demo day.
+Firstly, we could learn from those mature tool-stack what kind of tool-stack is still missing to implement TinyMLaaS in the future.
+Secondary, we could make this existing demo more fancy quickly to attract investors attending NEXUS Demo day.
 
 
 # Kick-off meeting
@@ -61,13 +61,13 @@ Scheduled on 16th JAN (MON)
 
 ## Architecture investigation
 - How should we understand Roberto's demo architecture?
-  - Any architecutre document?
-  - Any architecutre block diagram?
+  - Any architecture document?
+  - Any architecture block diagram?
   - Any flow diagram?
   - Any list of components used? which could be reused and which not, since the outcome of this project would be opensource'ed.
   - Any list of software frameworks each components uses?
 - Should we map each Seamless TinyML lifecycle management's phase on this demo scenario?
-- Should we make sure which phases are still missing? (e.g. "2. Model trainig")
+- Should we make sure which phases are still missing? (e.g. "2. Model training")
 
 Phase # | Name | Roberto's demo
 :---:|:---|:---
