@@ -10,7 +10,7 @@
   - week 3-12 == 10 weeks
   - Should we ask to squash this by week 12 (10 weeks)?
   - (1050/14/5== 15 hours) vs (1050/12/5 == 17.5 hours) vs (1050/10/5 == 21 hours)
-  - @Hiroshi to negotiate with Matti and each student
+  - ~~@Hiroshi to negotiate with Matti and each student~~
 
 
 # Project goal
