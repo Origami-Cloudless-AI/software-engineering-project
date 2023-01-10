@@ -22,9 +22,10 @@ Firstly, we could learn from those mature toolstack what kind of toolstack is st
 Sencondary, we could make this existing demo more fancy quickly to attract investoers attending NEXUS Demo day.
 
 
-# Preparation for 16th JAN kick-off
+# Kick-off meeting
+Scheduled on 16th JAN (MON)
 
-## What should we do on 16th?
+## Agenda
 - Get familiar with all participants
   - Even I want their CV in advance. @Roberto?
   - I want to understand their preference & skill level too.
@@ -44,7 +45,7 @@ Sencondary, we could make this existing demo more fancy quickly to attract inves
 - 1st sprint planning should be done on 16th.
 
 
-### Agree on WoW in SCRUM
+## Agree on WoW in SCRUM
 - Use Github project [KANBAN]()
 - Use [Discord channel](https://discord.gg/kQD685q4) to communicate,
 - Schedule a Daily meeting day & time
@@ -54,7 +55,7 @@ Sencondary, we could make this existing demo more fancy quickly to attract inves
 - Should we run CI/CD to reproduce the current Roberto's demo story at first, without a training part?
 
 
-### Architecture investigation
+## Architecture investigation
 - How should we understand Roberto's demo architecture?
   - Any architecutre document?
   - Any architecutre block diagram?
