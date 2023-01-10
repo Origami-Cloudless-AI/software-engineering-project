@@ -21,6 +21,8 @@ We will reproduce [Roberto's demo video](https://youtu.be/xYntGeLmCSI), adding i
 
 ## What should we do on 16th?
 - Get familiar with all participants
+  - Even I want their CV in advance. @Roberto?
+  - I want to understand their preference too.
 - Explain the [Project goal](#project-goal)
   - Should we share the [demo video](https://youtu.be/xYntGeLmCSI) in advance?
   - @Roberto, can we map each Seamless TinyML lifecycle management's phase on this demo?
