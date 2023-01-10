@@ -32,16 +32,17 @@ Scheduled on 16th JAN (MON)
 - Explain the [Project goal](#project-goal)
   - Should we share the [demo video](https://youtu.be/xYntGeLmCSI) in advance?
 - Set up a SCRUM team (e.g. specify each role in the project)
-  - SM: Michi + a Univ guy
+  - SM: Michi + a HU instructor
   - PO: Roberto
   - Developer: 5 students
   - ML: Hiroshi
-  - Customer: ??? @Michi
+  - Customer: Perttu & Samuli would review the outcome of increment in bi-weekly meeting.
 - User story mapping
   - Specify PBIs
   - Estimate PBI effort
   - Specify acceptance tests
-  - @Michi, PBI==SPI? If not why?
+  - ~~@Michi, PBI==SPI? If not why?~~
+  - 1 increment == 1 sprint or 1 increment == 2 sprint?
 - 1st sprint planning should be done on 16th.
 
 
