@@ -15,7 +15,7 @@ package Jetson_nano {
 	}
 
 (Control panel) -down-> (CV app)
-UI -down-> (Jupyter notebook)
+
 "ML" -right-> (Jupyter notebook)
 (CV app) -down-> (Jupyter notebook)
 (Jupyter notebook) <-down-> (GPU)
@@ -42,7 +42,7 @@ package Jetson_nano {
 	}
 
 (Control panel) -down-> (CV app)
-UI -down-> (Jupyter notebook)
+
 "ML" -right-> (Jupyter notebook)
 (CV app) -down-> (Jupyter notebook)
 (Jupyter notebook) <-down-> (GPU)
@@ -73,7 +73,7 @@ package Jetson_nano {
 	}
 
 (Control panel) -down-> (CV app)
-UI -down-> (Jupyter notebook)
+
 "ML" -right-> (Jupyter notebook)
 (CV app) -down-> (Jupyter notebook)
 (Jupyter notebook) <-down-> (GPU)
@@ -110,7 +110,7 @@ package Jetson_nano {
 	}
 
 (Control panel) -down-> (CV app)
-UI -down-> (Jupyter notebook)
+
 "ML1" -right-> (Jupyter notebook)
 (CV app) -down-> (Jupyter notebook)
 (Jupyter notebook) <-down-> (GPU)
