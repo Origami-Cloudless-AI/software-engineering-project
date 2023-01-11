@@ -6,7 +6,7 @@
 - 14 weeks (week 3-16) is scheduled.
   - 15 hours * 14 weeks * 5 students == 1050 hours / 7.5 hour == 140 man days / 22 == 6.4 man month.
   - @Michi, which unit for SBI workload? (e.g. 3 hours, 7.5 hours or 15 hours)
-- NEXUS Demo day is on 27th March on week 13
+- NEXUS Demo day is on 27th March on week 13 while MWC is on week 9 at the end of FEB.
   - week 3-16 == 14 weeks, originally
   - week 3-12 == 10 weeks, ideally
   - Should we ask to squash this by week 12 (10 weeks)?
@@ -14,18 +14,22 @@
     - 210 hours == 15 hours/week, originally
     - 210 hours / 12 weeks == 17.5 hours/week
     - 210 hours / 10 weeks  == 21 hours/week, ideally
-  - ~~@Hiroshi to negotiate with Matti and each student~~
 
 # Project goal
 We will reproduce [Roberto's demo video](https://youtu.be/xYntGeLmCSI), adding its ML training phase, towards NEXUS Demo day (27th March).
 While Roberto's demo uses relatively large hardware which may not belong to TinyML precisely (e.g. TinyML run on RTOS but not on Linux),
-those hardware (e.g. Jetson nano) usually come with a ready made tool-stack to run ML examples immediately.
+those hardware (e.g. Jetson nano) usually come with a mature ready-made tool-stack to run ML examples immediately.
 There are 4 benefits of making use of Roberto's demo for this project.
 
-1. Jetson nano is a standalone GPU, where we run some computer vision app, dashboard on a webserver and jupyternotebook at once before pipelining with other node.
+1. Jetson nano is a standalone GPU, where we run the following app locally at once before starting pipeline of other nodes.
+  - some computer vision app
+  - dashboard on a webserver
+  - jupyter notebook
 2. We could learn from Jetson nano mature tool-stack what kind of tool-stack is still missing to implement TinyMLaaS in the future.
-3. We could start with this existing demo immediately and be polishing it more fancy gradually, aiming at investors attending NEXUS Demo day.
-4. We could gradually migrating to TinyML by adding or replacing a note. For example, we could replace the data acquistion node with a `camera` + `Arduino Nano 33 BLE Sense` + `RPI` or a `camera` + `RPI pico`.
+3. We could start with this existing demo immediately in CI and be polishing it more fancy gradually, aiming at investors attending NEXUS Demo day.
+4. We could gradually migrating to TinyML by adding or replacing a note. For example, we could replace the data acquistion node with:
+   - camera + Arduino Nano 33 BLE Sense + RPI (for IP)
+   - camera + RPI pico with WiFi
 
 Our final goal is to run ML on a mirocontrooler node but it's better to start with the safer configuration at first.
 
@@ -35,11 +39,13 @@ Our final goal is to run ML on a mirocontrooler node but it's better to start wi
 Scheduled on 16th JAN (MON)
 
 ## Agenda
-- Get familiar with all participants
-  - Even I want their CV in advance. @Roberto?
-  - I want to understand their preference & skill level too.
+- Get familiar with all participants.
+  - Everyone introduces oneself
+     - what he can do
+     - what he wants to do
+     - how he understand this project
 - Explain the [Project goal](#project-goal)
-  - Should we share the [demo video](https://youtu.be/xYntGeLmCSI) in advance?
+  - We should present [demo video](https://youtu.be/xYntGeLmCSI).
 - Set up a SCRUM team (e.g. specify each role in the project)
   - SM: Michi + a HU instructor
   - PO: Roberto
@@ -50,19 +56,18 @@ Scheduled on 16th JAN (MON)
   - Specify PBIs
   - Estimate PBI effort
   - Specify acceptance tests
-  - ~~@Michi, PBI==SPI? If not why?~~
-  - 1 increment == 1 sprint or 1 increment == 2 sprint?
+  - 1 increment == 2 sprint
 - 1st sprint planning should be done on 16th.
 
 
 ## Agree on WoW in SCRUM
 - Use Github project [KANBAN]()
-- Use [Discord channel](https://discord.gg/kQD685q4) to communicate,
-- Schedule a Daily meeting day & time
-- 1 increment == 1 sprint?
-- 1st sprint should have some [Architecture investigation](#architecture-investigation) to find out which components are reusable
+- Use [Discord channel](https://discord.gg/kQD685q4) to communicate or Slack?
+- Agree on scheduling a Daily meeting day & time
+- 1 increment == 2 sprint
+- 1st sprint should have some [Architecture investigation](#architecture-investigation) to find out which components are reusable.
 - 1st sprint should have a ZFR (Zero Feature Release) to make sure that CI/CD works on Github workflow (action) without any features (or just with existing components)
-- Should we run CI/CD to reproduce the current Roberto's demo story at first, without a training part?
+- We should run CI/CD to reproduce the current Roberto's demo story at first, without a training part. If HW is not available, it could be simulated.
 
 
 ## Architecture investigation
@@ -75,14 +80,14 @@ Scheduled on 16th JAN (MON)
 - Should we map each Seamless TinyML lifecycle management's phase on this demo scenario?
 - Should we make sure which phases are still missing? (e.g. "2. Model training")
 
-Phase # | Name | Roberto's demo
-:---:|:---|:---
-1| Data collection |
-2| Model training |
-3| Model squeezing |
-4| Model splitting |
-5| Model deployment |
-6| Model update |
+Phase # | Name | Early phase | Demo
+:---:|:---|:---|:---
+1| Data collection | Simulated | RPI pico + Cam 
+2| Model training | Missing | On Cloud VM?
+3| Model squeezing | ML compiler | ML compiler 
+4| Model splitting | Standalone |  Pipelining
+5| Model deployment | Standalone | TBI
+6| Model update | Dashboard | Control panel
 
 
 # Questions
