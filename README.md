@@ -47,11 +47,11 @@ Can UI (Dashboard & Control panel) parts be prioritized to meet some milestones?
 # Project goal (1/2)
 We will reproduce [Roberto's demo video](https://youtu.be/xYntGeLmCSI), adding its ML training phase, along with TinyML MCU.
 While this demo uses relatively large hardware which may not belong to TinyML strictly (e.g. TinyML should run on RTOS but not on Linux),
-we are gradully migrating to TinyML MCUs. There are 4 benefits of starting with the original setting:
+we are gradually migrating to TinyML MCUs. There are 4 benefits of starting with the original setting:
 
-1. Jetson nano is a standalone GPU, where we run the following app locally at once before starting pipelining on other nodes.
+1. Jetson nano is a standalone GPU, where we run the following app locally at once before starting pipe-lining on other nodes.
    - Computer Vision apps, inc. ML models
-   - dashboard on a webserver
+   - dashboard on a web server
    - Jupyter notebook
 
 # Project goal (2/2)
@@ -59,7 +59,7 @@ we are gradully migrating to TinyML MCUs. There are 4 benefits of starting with 
 3. We could start with this existing demo immediately with runnable CI, and
 4. We are polishing it more fancy gradually towards TinyML as-a-Service.
 4. We could gradually migrating to TinyML by adding or replacing a node one by one.
-   - For example, we could replace the data acquistion node with:
+   - For example, we could replace the data acquisition node with:
      a. Camera sensor + Arduino Nano 33 BLE Sense + RPI (for IP)
      b. Camera sensor + RPI pico with WiFi
 
@@ -80,7 +80,7 @@ Jetson nano is almost a laptop with GPU so that everything should work standalon
 ## ML pipeline
 1. Object detection
 2. -> face detection
-3. -> Person identificaion pipeline
+3. -> Person identification pipeline
 
 A VM can be used to test the similar functionality with mock camera.
 ::::
@@ -133,7 +133,7 @@ Run a small part of ML processing (ML2) as TinyML on MCU.
 ![](images/mvp_004.png){height=85%}
 ::::
 :::
-Cloud'ification should be done earlier independently to meet early demo (e.g. MWC)
+CLOUD'ification should be done earlier independently to meet early demo (e.g. MWC)
 
 
 # MVP4 -> MVP5
@@ -157,7 +157,7 @@ Run some part of ML processing (ML0) on Cloud.
 ![](images/mvp_006.png){height=90%}
 ::::
 :::
-No cascading MLs but parallerizing with nodes.
+No cascading MLs but paralleling with nodes.
 
 
 # MVP6 -> MVP7
@@ -186,7 +186,7 @@ Get rid of Jetson nano but only with TinyMLaaS.
    c. MCU with **mock** Cam
 5. Merge Changes once all tests pass.
 6. Store Artifacts
-    - installable images
+    - install-able images
 7. Always Runnable system to demo
 ::::
 :::: {.column width=55%}
