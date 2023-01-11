@@ -27,7 +27,7 @@ There are 4 benefits of making use of Roberto's demo for this project.
    - jupyter notebook
 2. We could learn from Jetson nano mature tool-stack what kind of tool-stack is still missing to implement TinyMLaaS in the future.
 3. We could start with this existing demo immediately in CI and be polishing it more fancy gradually, aiming at investors attending NEXUS Demo day.
-4. We could gradually migrating to TinyML by adding or replacing a note. For example, we could replace the data acquistion node with:
+4. We could gradually migrating to TinyML by adding or replacing a node. For example, we could replace the data acquistion node with:
    - camera + Arduino Nano 33 BLE Sense + RPI (for IP)
    - camera + RPI pico with WiFi
 
