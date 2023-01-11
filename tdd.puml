@@ -1,5 +1,6 @@
 @startuml
-'title "test triple with TDD / CI / CD"
+
+title "Test 3 environments at once with mock cam"
 
 cloud Cloud {
 	package Github {
