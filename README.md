@@ -20,9 +20,15 @@
 We will reproduce [Roberto's demo video](https://youtu.be/xYntGeLmCSI), adding its ML training phase, towards NEXUS Demo day (27th March).
 While Roberto's demo uses relatively large hardware which may not belong to TinyML precisely (e.g. TinyML run on RTOS but not on Linux),
 those hardware (e.g. Jetson nano) usually come with a ready made tool-stack to run ML examples immediately.
-There are 2 benefits of making use of Roberto's demo for this project.
-Firstly, we could learn from those mature tool-stack what kind of tool-stack is still missing to implement TinyMLaaS in the future.
-Secondary, we could make this existing demo more fancy quickly to attract investors attending NEXUS Demo day.
+There are 4 benefits of making use of Roberto's demo for this project.
+
+1. Jetson nano is a standalone GPU, where we run some computer vision app, dashboard on a webserver and jupyternotebook at once before pipelining with other node.
+2. We could learn from Jetson nano mature tool-stack what kind of tool-stack is still missing to implement TinyMLaaS in the future.
+3. We could start with this existing demo immediately and be polishing it more fancy gradually, aiming at investors attending NEXUS Demo day.
+4. We could gradually migrating to TinyML by adding or replacing a note. For example, we could replace the data acquistion node with a `camera` + `Arduino Nano 33 BLE Sense` + `RPI` or a `camera` + `RPI pico`.
+
+Our final goal is to run ML on a mirocontrooler node but it's better to start with the safer configuration at first.
+
 
 
 # Kick-off meeting
