@@ -1,4 +1,4 @@
-all: soft_eng_proj_tinyml_lifecycle.pdf
+all: soft_eng_proj_tinyml_lifecycle.pdf png
 
 %.pdf: %.md
 	pandoc --toc --variable urlcolor=blue -s $< -o $@
@@ -10,3 +10,8 @@ png: $(patsubst %.puml,%.png,$(shell ls *.puml))
 
 %.png: %.puml
 	java -jar plantuml.jar -tpng $<
+	mv *.png images/
+
+clean:
+	rm *.pdf
+
