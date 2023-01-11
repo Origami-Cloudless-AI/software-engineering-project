@@ -22,9 +22,9 @@ those hardware (e.g. Jetson nano) usually come with a mature ready-made tool-sta
 There are 4 benefits of making use of Roberto's demo for this project.
 
 1. Jetson nano is a standalone GPU, where we run the following app locally at once before starting pipeline of other nodes.
-  - some computer vision app
-  - dashboard on a webserver
-  - jupyter notebook
+   - some computer vision app
+   - dashboard on a webserver
+   - jupyter notebook
 2. We could learn from Jetson nano mature tool-stack what kind of tool-stack is still missing to implement TinyMLaaS in the future.
 3. We could start with this existing demo immediately in CI and be polishing it more fancy gradually, aiming at investors attending NEXUS Demo day.
 4. We could gradually migrating to TinyML by adding or replacing a note. For example, we could replace the data acquistion node with:
