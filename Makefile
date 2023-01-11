@@ -15,3 +15,5 @@ png: $(patsubst %.puml,%.png,$(shell ls *.puml))
 clean:
 	rm *.pdf
 
+slides:
+	pandoc -t beamer README.md -o README.pdf

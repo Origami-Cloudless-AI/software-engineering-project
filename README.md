@@ -15,7 +15,7 @@ toc: false
 # Basic info (1/2)
 - Here's the original [announcement](https://study.cs.helsinki.fi/projekti/topics/create)
 - Here's [our proposal](https://github.com/Origami-TinyML/software-engineering-project/blob/main/soft_eng_proj_tinyml_lifecycle.md)
-- 5 students are assigned to our project, no info for their skill level yet.
+- 5 students are assigned to our project.
 - 15 hours / week / student is expected.
 - 14 weeks (week 3-16) is scheduled.
   * 15 hours * 14 weeks * 5 students
@@ -177,10 +177,10 @@ Get rid of Jetson nano but only with TinyMLaaS.
   - We should present [demo video1](https://youtu.be/xYntGeLmCSI) & [demo video1](https://www.youtube.com/watch?v=d37narobVG0)
 
 ## Set up a SCRUM team (e.g. specify each role in the project)
-  - SM: HU instructor + Michi
-  - PO: Roberto
+  - SM: HU instructor + [Michihito Mizutani](https://www.linkedin.com/in/michihito/)
+  - PO: [Roberto Morabito](https://www.linkedin.com/in/robertomorabito/)
   - Developer: 5 students
-  - ML: Hiroshi
+  - ML: [Hiroshi Doyu](https://www.linkedin.com/in/hidoyu/)
   - Customer: Perttu & Samuli would review the outcome of increment in bi-weekly meeting.
 
 # Kick-off meeting Agenda (2/3)
