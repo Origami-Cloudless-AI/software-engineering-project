@@ -1,0 +1,57 @@
+@startuml
+'title "test triple with TDD / CI / CD"
+
+cloud Cloud {
+	package Github {
+		(workflow) <- (repository) : issue closed
+	}
+
+	package UI {
+		(workflow) -down-> (Control panel) : kick CI
+		(Dash board)
+	}
+	package Docker_Container {
+		  artifact "ML0"
+		  (Jupyter notebook')
+		  (CV app')
+	}
+	collections "GPUs"
+"ML0" -right-> (Jupyter notebook')
+(CV app') -down-> (Jupyter notebook')
+(Jupyter notebook') <-down-> GPUs
+(CV app') <-down- (**mock** cam') : input test images
+}
+
+actor "developer" --left--> (repository) : submit changes
+
+package Jetson_nano {
+	rectangle {
+		  artifact "ML1"
+		  (Jupyter notebook)
+		  (CV app')
+	}
+
+"ML1" -right-> (Jupyter notebook)
+(CV app) -down-> (Jupyter notebook)
+(Jupyter notebook) <-down-> (GPU)
+(CV app) <-down- (**mock** cam) : input test images
+}
+
+(Control panel) --down--> (CV app) : run acceptance test
+(Control panel) --down--> (CV app') : run acceptance test
+(Control panel) --down--> RPI : run acceptance test
+
+package RPI {
+	(IP address)
+}
+
+package MCU {
+        artifact "ML2"
+	ML2 -down-> (TinyML)
+	(TinyML) <-down- (**mock** cam'') : input test images 
+}
+
+RPI <-down- MCU : USB
+
+
+@enduml

@@ -170,6 +170,28 @@ Get rid of Jetson nano but only with TinyMLaaS.
 :::
 
 
+# TDD / CI / CD / Acceptance test
+::: columns
+:::: {.column width=45%}
+## How it works
+1. Developer sends RP to repository
+2. Kicked Github workflow (action)
+3. Starts CI / CD
+4. Run acceptance tests on 3 envs
+   a. Container with **mock** Cam
+   b. Jetson nano with **mock** Cam
+   c. MCU with **mock** Cam
+5. Merge Changes once all tests pass.
+6. Store Artifacts
+    - installable images
+7. Always Runnable system to demo
+::::
+:::: {.column width=55%}
+![](images/tdd.png){height=110%}
+::::
+:::
+
+
 
 # Kick-off meeting Agenda (1/3)
 - Scheduled on 16th JAN (MON)

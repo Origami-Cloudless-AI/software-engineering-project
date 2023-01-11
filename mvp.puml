@@ -22,12 +22,12 @@ package Jetson_nano {
 }
 
 
-(CV app) <-down- (Camera_sensor) : i2c
+(CV app) <-down- (Camera_sensor) : SPI
 
 '======================================================
 newpage
 
-title "MVP1: Add MCU via I2C to collect data"
+title "MVP1: Add MCU via SPI to collect data"
 
 package Jetson_nano {
 	package UI {
@@ -49,11 +49,11 @@ package Jetson_nano {
 }
 
 package MCU {
-	(i2c USB converter)
+	(SPI USB converter)
 }
 
 Jetson_nano <-down- MCU : USB
-MCU <-down- (Camera_sensor) : i2c
+MCU <-down- (Camera_sensor) : SPI
 
 '======================================================
 newpage
@@ -84,12 +84,12 @@ package RPI {
 }
 
 package MCU {
-	(i2c USB converter)
+	(SPI USB converter)
 }
 
 Jetson_nano <-down- RPI : network
 RPI <-down- MCU : USB
-MCU <-down- (Camera_sensor) : i2c
+MCU <-down- (Camera_sensor) : SPI
 
 
 '======================================================
@@ -127,7 +127,7 @@ package MCU {
 
 Jetson_nano <-down- RPI : network
 RPI <-down- MCU : USB
-TinyML <-down- (Camera_sensor) : i2c
+TinyML <-down- (Camera_sensor) : SPI
 
 '======================================================
 newpage
@@ -168,7 +168,7 @@ package MCU {
 
 Jetson_nano <-down- RPI : network
 RPI <-down- MCU : USB
-TinyML <-down- (Camera_sensor) : i2c
+TinyML <-down- (Camera_sensor) : SPI
 
 
 '======================================================
@@ -218,7 +218,7 @@ package MCU {
 
 Jetson_nano <-down- RPI : network
 RPI <-down- MCU : USB
-TinyML <-down- (Camera_sensor) : i2c
+TinyML <-down- (Camera_sensor) : SPI
 
 '======================================================
 newpage
@@ -267,7 +267,7 @@ package MCU {
 }
 
 RPI <-down- MCU : USB
-TinyML <-down- (Camera_sensor) : i2c
+TinyML <-down- (Camera_sensor) : SPI
 
 '======================================================
 newpage
@@ -303,7 +303,7 @@ package MCU {
 }
 
 RPI <-down- MCU : USB
-TinyML <-down- (Camera_sensor) : i2c
+TinyML <-down- (Camera_sensor) : SPI
 
 
 @enduml
