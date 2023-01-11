@@ -180,7 +180,7 @@ Get rid of Jetson nano but only with TinyMLaaS.
   3. How one sees this project
 
 ## Will explain [Project goal](#project-goal)
-  - We should present [demo video1](https://youtu.be/xYntGeLmCSI) & [demo video1](https://www.youtube.com/watch?v=d37narobVG0)
+  - We should present [demo video 1](https://youtu.be/xYntGeLmCSI) & [demo video 2](https://www.youtube.com/watch?v=d37narobVG0)
 
 ## Set up a SCRUM team (e.g. specify each role in the project)
   - SM: HU instructor + [Michihito Mizutani](https://www.linkedin.com/in/michihito/)
