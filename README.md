@@ -1,13 +1,14 @@
 ---
-title: "Software Engineering Project in Helsinki University CS"
-author: "[Origami](https://Origami-TinyML.github.io/blog/about.html)"
+title: "Seamless TinyML lifecycle management"
+author: "In Software Engineering Project with Helsinki University CS"
+institute: "[Origami@NEXUS](https://Origami-TinyML.github.io/blog/about.html)"
 theme: "metropolis"
 fonttheme: "default"
 fontsize: 11pt
 urlcolor: red
 linkstyle: bold
 aspectratio: 169
-date: 11/01/2023
+date: 16/01/2023
 section-titles: false
 toc: false
 ---
@@ -26,34 +27,35 @@ toc: false
 # Basic info (2/2)
 - Milestone 1: MWC is at the end of FEB. on **week 9**.
 - Milestone 2: NEXUS Demo day is on 27th March on **week 13**.
-  - week 3-16, 14 weeks, originally
-  - week 3-14, 12 weeks, preferably
-  - week 3-12, 10 weeks, ideally
-- 15 hours * 14 weeks == 210 hours
-  1. 210 hours / 14 weeks == 15 hours/week, originally
-  2. 210 hours / 12 weeks == 17.5 hours/week
-  3. 210 hours / 10 weeks  == 21 hours/week
-- UI (Dashboard & Control panel) parts should be prioritized.  
+- Project duration:
+  1. Originally, 14 weeks, Week 3-16
+  2. Preferably, 12 weeks, Week 3-14
+  3. Ideally, 10 weeks, Week 3-12
+- 15 hours * 14 weeks = 210 hours
+  1. Originally, 210 hours / 14 weeks = 15 hours/week
+  2. Preferably, 210 hours / 12 weeks = 17.5 hours/week
+  3. Ideally, 210 hours / 10 weeks = 21 hours/week
+
+UI (Dashboard & Control panel) parts should be prioritized.  
 
 # Project goal (1/2)
-We will reproduce [Roberto's demo video](https://youtu.be/xYntGeLmCSI), adding its ML training phase.
-While Roberto's demo uses relatively large hardware which may not belong to TinyML precisely (e.g. TinyML run on RTOS but not on Linux),
-those hardware (e.g. Jetson nano) usually come with a mature ready-made tool-stack to run ML examples immediately.
-There are 4 benefits of making use of Roberto's demo for this project.
+We will reproduce [Roberto's demo video](https://youtu.be/xYntGeLmCSI), adding its ML training phase, along with TinyML MCU.
+While this demo uses relatively large hardware which may not belong to TinyML strictly (e.g. TinyML should run on RTOS but not on Linux),
+we are gradully migrating to TinyML MCUs. There are 4 benefits of starting with the original setting:
 
-1. Jetson nano is a standalone GPU, where we run the following app locally at once before starting pipeline of other nodes.
+1. Jetson nano is a standalone GPU, where we run the following app locally at once before starting pipelining on other nodes.
    - Computer vision app, inc. ML models
    - dashboard on a webserver
-   - jupyter notebook
+   - Jupyter notebook
 
 # Project goal (2/2)
 2. We could learn from Jetson nano mature tool-stack what kind of tool-stack is still missing to implement TinyMLaaS.
-3. We could start with this existing demo immediately in runnable CI, and
+3. We could start with this existing demo immediately with runnable CI, and
 4. We are polishing it more fancy gradually towards TinyML as-a-Service.
 4. We could gradually migrating to TinyML by adding or replacing a node one by one.
-  - For example, we could replace the data acquistion node with:
-    - camera + Arduino Nano 33 BLE Sense + RPI (for IP)
-    - camera + RPI pico with WiFi
+   - For example, we could replace the data acquistion node with:
+     a. Camera sensor + Arduino Nano 33 BLE Sense + RPI (for IP)
+     b. Camera sensor + RPI pico with WiFi
 
 Our final goal is to run ML on a mirocontrooler node but it's better to start with the safer configuration at first.
 
@@ -111,7 +113,7 @@ To orchestrate ML, IP connection is convenient so that we insert RPI between Jet
 ![](images/mvp_003.png){height=85%}
 ::::
 :::
-Run a small part of ML processing as TinyML on MCU.
+Run a small part of ML processing (ML2) as TinyML on MCU.
 
 # MVP3 -> MVP4
 ::: columns
@@ -122,7 +124,7 @@ Run a small part of ML processing as TinyML on MCU.
 ![](images/mvp_004.png){height=85%}
 ::::
 :::
-Factor out UI part on Cloud. (e.g. ELK stack?)
+Factor out UI on Cloud. This part could be done independently from TinyML.
 
 
 # MVP4 -> MVP5
@@ -134,7 +136,7 @@ Factor out UI part on Cloud. (e.g. ELK stack?)
 ![](images/mvp_005.png){height=80%}
 ::::
 :::
-Run some part of ML processing on Cloud.
+Run some part of ML processing (ML0) on Cloud.
 
 
 # MVP5 -> MVP6
@@ -146,7 +148,7 @@ Run some part of ML processing on Cloud.
 ![](images/mvp_006.png){height=90%}
 ::::
 :::
-No need to cascade MLs so that Cloud control panel commands each node independently.
+No cascading MLs but parallerizing with nodes.
 
 
 # MVP7
@@ -157,26 +159,25 @@ No need to cascade MLs so that Cloud control panel commands each node independen
 :::: {.column width=50%}
 ![](images/mvp_007.png){height=80%}
 
-We could get rid of Jetson nano if feasbile.
+Get rid of Jetson nano but only with TinyMLaaS.
 ::::
 :::
 
 
 
 # Kick-off meeting Agenda (1/3)
-Scheduled on 16th JAN (MON)
+- Scheduled on 16th JAN (MON)
 
-## Get familiar with all participants.
-  - Everyone introduces oneself
-     - what he can do
-     - what he wants to do
-     - how he understand this project
+## Get familiar with all participants. Everyone introduces oneself
+  1. What one can do
+  2. What one wants to do
+  3. How one sees this project
 
-## Explain the [Project goal](#project-goal)
-  - We should present [demo video](https://youtu.be/xYntGeLmCSI).
+## Will explain [Project goal](#project-goal)
+  - We should present [demo video1](https://youtu.be/xYntGeLmCSI) & [demo video1](https://www.youtube.com/watch?v=d37narobVG0)
 
 ## Set up a SCRUM team (e.g. specify each role in the project)
-  - SM: Michi + a HU instructor
+  - SM: HU instructor + Michi
   - PO: Roberto
   - Developer: 5 students
   - ML: Hiroshi
@@ -202,7 +203,7 @@ Scheduled on 16th JAN (MON)
 - We should run CI/CD to reproduce the current Roberto's demo story at first, without a training part. If HW is not available, it could be simulated.
 
 
-# Architecture investigation
+# Architecture investigation @Roberto?
 - How should we understand Roberto's demo architecture?
   - Any architecture document?
   - Any architecture block diagram?
@@ -212,7 +213,7 @@ Scheduled on 16th JAN (MON)
 - Should we map each Seamless TinyML lifecycle management's phase on this demo scenario?
 - Should we make sure which phases are still missing? (e.g. "2. Model training")
 
-# Mapping
+# Mapping 6 Seamless TinyML lifecycle to this project
 
 Phase # | Name | Early phase | Demo
 :---:|:---|:---|:---
@@ -224,8 +225,15 @@ Phase # | Name | Early phase | Demo
 6| Model update | Dashboard | Control panel
 
 
-# Questions
+
+# Remaining questions
 - What's the main purpose of this project from students' perspective? (e.g. experience Agile development)
 - How long can the 16th meeting be allocated? (e.g. 3-4 hours with lunch break)
 - What kind of competency are students generally expected? (e.g. Python, JS, Java, Frontend, Embedded)
 - Can student's weekly working hours be negotiable? (e.g. 15 hours with 14 weeks -> 17.5 hours with 12 weeks)
+
+
+# Contact information
+## [Origami](#Team)
+[https://Origami-TinyML.github.io/blog/about.html](https://Origami-TinyML.github.io/blog/about.html)
+
