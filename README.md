@@ -33,7 +33,7 @@ There are 4 benefits of making use of Roberto's demo for this project.
 
 Our final goal is to run ML on a mirocontrooler node but it's better to start with the safer configuration at first.
 
-![MVP iteration](mvp.png)
+![MVP iteration](mvp_journey.png)
 
 # Kick-off meeting
 Scheduled on 16th JAN (MON)
