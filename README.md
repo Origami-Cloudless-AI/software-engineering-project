@@ -180,7 +180,7 @@ Get rid of Jetson nano but only with TinyMLaaS.
   - SM: HU instructor + [Michihito Mizutani](https://www.linkedin.com/in/michihito/)
   - PO: [Roberto Morabito](https://www.linkedin.com/in/robertomorabito/)
   - Developer: 5 students
-  - ML: [Hiroshi Doyu](https://www.linkedin.com/in/hidoyu/)
+  - ML support: [Hiroshi Doyu](https://www.linkedin.com/in/hidoyu/)
   - Customer: Perttu & Samuli would review the outcome of increment in bi-weekly meeting.
 
 # Kick-off meeting Agenda (2/3)
