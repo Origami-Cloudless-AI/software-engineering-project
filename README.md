@@ -25,13 +25,16 @@ toc: false
   - Which SBI workload unit to use? (e.g. 3 hours, 7.5 hours or 15 hours)
 
 # Basic info (2/2)
+
 ## Milestone
 1. MWC is at the end of FEB. on **week 9**.
 2. NEXUS Demo day is on 27th March on **week 13**.
+
 ## Project duration:
   1. Originally, 14 weeks, Week 3-16
   2. Preferably, 12 weeks, Week 3-14
   3. Ideally, 10 weeks, Week 3-12
+
 ## Weekly workforce
   - 15 hours * 14 weeks = 210 hours
   1. Originally, 210 hours / 14 weeks = 15 hours/week
