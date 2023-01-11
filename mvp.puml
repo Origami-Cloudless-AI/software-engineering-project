@@ -290,7 +290,7 @@ cloud Cloud {
 (Jupyter notebook') <-down-> GPUs
 }
 
-(Control panel) --down--> (CV app) : network
+(Control panel) --down--> (CV app') : network
 (Control panel) --down--> RPI : network
 
 package RPI {
