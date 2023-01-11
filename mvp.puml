@@ -269,5 +269,41 @@ package MCU {
 RPI <-down- MCU : USB
 TinyML <-down- (Camera_sensor) : i2c
 
+'======================================================
+newpage
+
+title "MVP7: TinyML as-a-Service"
+
+cloud Cloud {
+	package UI {
+		(Control panel)
+		(Dash board)
+	}
+	rectangle {
+		  artifact "ML0"
+		  (Jupyter notebook')
+		  (CV app')
+	}
+	collections "GPUs"
+"ML0" -right-> (Jupyter notebook')
+(CV app') -down-> (Jupyter notebook')
+(Jupyter notebook') <-down-> GPUs
+}
+
+(Control panel) --down--> (CV app) : network
+(Control panel) --down--> RPI : network
+
+package RPI {
+	(IP address)
+}
+
+package MCU {
+        artifact "ML2"
+	ML2 -down-> (TinyML)
+}
+
+RPI <-down- MCU : USB
+TinyML <-down- (Camera_sensor) : i2c
+
 
 @enduml
