@@ -53,7 +53,7 @@ Scheduled on 16th JAN (MON)
   - ML: Hiroshi
   - Customer: Perttu & Samuli would review the outcome of increment in bi-weekly meeting.
 - User story mapping
-  - Specify PBIs
+  - Specify PBIs always as GitHub issues, which need to be a PR and it automatically runs CI/CD as acceptance tests.
   - Estimate PBI effort
   - Specify acceptance tests
   - 1 increment == 2 sprint
