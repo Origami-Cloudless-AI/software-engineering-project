@@ -1,4 +1,4 @@
-all: soft_eng_proj_tinyml_lifecycle.pdf png
+all: soft_eng_proj_tinyml_lifecycle.pdf png README.pdf
 
 %.pdf: %.md
 	pandoc --toc --variable urlcolor=blue -s $< -o $@

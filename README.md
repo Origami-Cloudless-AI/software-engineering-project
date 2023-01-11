@@ -14,29 +14,32 @@ toc: false
 ---
 # Basic info (1/2)
 - Here's the original [announcement](https://study.cs.helsinki.fi/projekti/topics/create)
-- Here's [our proposal](https://github.com/Origami-TinyML/software-engineering-project/blob/main/soft_eng_proj_tinyml_lifecycle.md)
+- Here's our proposal, [Seamless TinyML lifecycle management](https://github.com/Origami-TinyML/software-engineering-project/blob/main/soft_eng_proj_tinyml_lifecycle.md)
 - 5 students are assigned to our project.
-- 15 hours / week / student is expected.
-- 14 weeks (week 3-16) is scheduled.
+- 15 working hours / week / student is expected.
+- The project duration, 14 weeks (week 3-16), is scheduled.
   * 15 hours * 14 weeks * 5 students
   * = 1050 hours / 7.5 hour
   * = 140 man days / 22
-  * = 6.4 man month.
-  - Which unit for SBI workload? (e.g. 3 hours, 7.5 hours or 15 hours)
+  * = 6.4 man month
+  - Which SBI workload unit to use? (e.g. 3 hours, 7.5 hours or 15 hours)
 
 # Basic info (2/2)
-- Milestone 1: MWC is at the end of FEB. on **week 9**.
-- Milestone 2: NEXUS Demo day is on 27th March on **week 13**.
-- Project duration:
+## Milestone
+1. MWC is at the end of FEB. on **week 9**.
+2. NEXUS Demo day is on 27th March on **week 13**.
+## Project duration:
   1. Originally, 14 weeks, Week 3-16
   2. Preferably, 12 weeks, Week 3-14
   3. Ideally, 10 weeks, Week 3-12
-- 15 hours * 14 weeks = 210 hours
+## Weekly workforce
+  - 15 hours * 14 weeks = 210 hours
   1. Originally, 210 hours / 14 weeks = 15 hours/week
   2. Preferably, 210 hours / 12 weeks = 17.5 hours/week
   3. Ideally, 210 hours / 10 weeks = 21 hours/week
 
-UI (Dashboard & Control panel) parts should be prioritized.  
+Can UI (Dashboard & Control panel) parts be prioritized to meet some milestones?
+
 
 # Project goal (1/2)
 We will reproduce [Roberto's demo video](https://youtu.be/xYntGeLmCSI), adding its ML training phase, along with TinyML MCU.
