@@ -1,0 +1,273 @@
+@startuml
+
+title "MVP0: Standalone ML processing"
+
+package Jetson_nano {
+	package UI {
+		(Control panel)
+		(Dash board)
+	}
+
+	rectangle {
+		  collections "ML"
+		  (Jupyter notebook)
+		  (CV app)
+	}
+
+(Control panel) -down-> (CV app)
+UI -down-> (Jupyter notebook)
+"ML" -right-> (Jupyter notebook)
+(CV app) -down-> (Jupyter notebook)
+(Jupyter notebook) <-down-> (GPU)
+}
+
+
+(CV app) <-down- (Camera_sensor) : i2c
+
+'======================================================
+newpage
+
+title "MVP1: Add MCU via I2C to collect data"
+
+package Jetson_nano {
+	package UI {
+		(Control panel)
+		(Dash board)
+	}
+
+	rectangle {
+		  collections "ML"
+		  (Jupyter notebook)
+		  (CV app)
+	}
+
+(Control panel) -down-> (CV app)
+UI -down-> (Jupyter notebook)
+"ML" -right-> (Jupyter notebook)
+(CV app) -down-> (Jupyter notebook)
+(Jupyter notebook) <-down-> (GPU)
+}
+
+package MCU {
+	(i2c USB converter)
+}
+
+Jetson_nano <-down- MCU : USB
+MCU <-down- (Camera_sensor) : i2c
+
+'======================================================
+newpage
+
+title "MVP2: Connect via network"
+
+package Jetson_nano {
+	package UI {
+		(Control panel)
+		(Dash board)
+	}
+
+	rectangle {
+		  collections "ML"
+		  (Jupyter notebook)
+		  (CV app)
+	}
+
+(Control panel) -down-> (CV app)
+UI -down-> (Jupyter notebook)
+"ML" -right-> (Jupyter notebook)
+(CV app) -down-> (Jupyter notebook)
+(Jupyter notebook) <-down-> (GPU)
+}
+
+package RPI {
+	(IP address)
+}
+
+package MCU {
+	(i2c USB converter)
+}
+
+Jetson_nano <-down- RPI : network
+RPI <-down- MCU : USB
+MCU <-down- (Camera_sensor) : i2c
+
+
+'======================================================
+newpage
+
+title "MVP3: Offloading with TinyML"
+
+package Jetson_nano {
+	package UI {
+		(Control panel)
+		(Dash board)
+	}
+
+	rectangle {
+		  artifact "ML1"
+		  (Jupyter notebook)
+		  (CV app)
+	}
+
+(Control panel) -down-> (CV app)
+UI -down-> (Jupyter notebook)
+"ML1" -right-> (Jupyter notebook)
+(CV app) -down-> (Jupyter notebook)
+(Jupyter notebook) <-down-> (GPU)
+}
+
+package RPI {
+	(IP address)
+}
+
+package MCU {
+        artifact "ML2"
+	ML2 -down-> (TinyML)
+}
+
+Jetson_nano <-down- RPI : network
+RPI <-down- MCU : USB
+TinyML <-down- (Camera_sensor) : i2c
+
+'======================================================
+newpage
+
+title "MVP4: Add Cloud control UI"
+
+cloud Cloud {
+	package UI {
+		(Control panel)
+		(Dash board)
+	}
+
+}
+
+
+package Jetson_nano {
+	rectangle {
+		  artifact "ML1"
+		  (Jupyter notebook)
+		  (CV app)
+	}
+
+"ML1" -right-> (Jupyter notebook)
+(CV app) -down-> (Jupyter notebook)
+(Jupyter notebook') <-down-> (GPU)
+}
+
+(Control panel) --down--> (CV app)
+
+package RPI {
+	(IP address)
+}
+
+package MCU {
+        artifact "ML2"
+	ML2 -down-> (TinyML)
+}
+
+Jetson_nano <-down- RPI : network
+RPI <-down- MCU : USB
+TinyML <-down- (Camera_sensor) : i2c
+
+
+'======================================================
+newpage
+
+title "MVP5: Add Cloud ML"
+
+cloud Cloud {
+	package UI {
+		(Control panel)
+		(Dash board)
+	}
+	rectangle {
+		  artifact "ML0"
+		  (Jupyter notebook')
+		  (CV app')
+	}
+	collections "GPUs"
+"ML0" -right-> (Jupyter notebook')
+(CV app') -down-> (Jupyter notebook')
+(Jupyter notebook') <-down-> GPUs
+}
+
+package Jetson_nano {
+	rectangle {
+		  artifact "ML1"
+		  (Jupyter notebook)
+		  (CV app')
+	}
+
+"ML1" -right-> (Jupyter notebook)
+(CV app) -down-> (Jupyter notebook)
+(Jupyter notebook) <-down-> (GPU)
+}
+
+(Control panel) --down--> (CV app) : network
+(Control panel) --down--> (CV app')
+
+package RPI {
+	(IP address)
+}
+
+package MCU {
+        artifact "ML2"
+	ML2 -down-> (TinyML)
+}
+
+Jetson_nano <-down- RPI : network
+RPI <-down- MCU : USB
+TinyML <-down- (Camera_sensor) : i2c
+
+'======================================================
+newpage
+
+title "MVP6: Parallerized ML processing"
+
+cloud Cloud {
+	package UI {
+		(Control panel)
+		(Dash board)
+	}
+	rectangle {
+		  artifact "ML0"
+		  (Jupyter notebook')
+		  (CV app')
+	}
+	collections "GPUs"
+"ML0" -right-> (Jupyter notebook')
+(CV app') -down-> (Jupyter notebook')
+(Jupyter notebook') <-down-> GPUs
+}
+
+package Jetson_nano {
+	rectangle {
+		  artifact "ML1"
+		  (Jupyter notebook)
+		  (CV app')
+	}
+
+"ML1" -right-> (Jupyter notebook)
+(CV app) -down-> (Jupyter notebook)
+(Jupyter notebook) <-down-> (GPU)
+}
+
+(Control panel) --down--> (CV app) : network
+(Control panel) --down--> (CV app')
+(Control panel) --down--> RPI : network
+
+package RPI {
+	(IP address)
+}
+
+package MCU {
+        artifact "ML2"
+	ML2 -down-> (TinyML)
+}
+
+RPI <-down- MCU : USB
+TinyML <-down- (Camera_sensor) : i2c
+
+
+@enduml
