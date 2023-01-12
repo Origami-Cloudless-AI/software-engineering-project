@@ -263,7 +263,7 @@ Customer | Perttu, Samuli | Review incremental
 - 1st sprint should have a ZFR (Zero Feature Release) to make sure that CI/CD works on Github workflow (action) without any features (or just with existing components)
 - We should run CI/CD to reproduce the current Roberto's demo story at first, without a training part. If HW is not available, it could be simulated.
 
-
+<!---
 # Architecture investigation @Roberto?
 - How should we understand Roberto's demo architecture?
   - Any architecture document?
@@ -273,6 +273,8 @@ Customer | Perttu, Samuli | Review incremental
   - Any list of software frameworks each components uses?
 - Should we map each Seamless TinyML lifecycle management's phase on this demo scenario?
 - Should we make sure which phases are still missing? (e.g. "2. Model training")
+-->
+
 
 # Mapping 6 Seamless TinyML lifecycle to this project
 
