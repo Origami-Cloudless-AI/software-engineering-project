@@ -62,12 +62,11 @@ The following demos/tutorials can provide an high-level overview on how to deplo
 Please note that online it is possible to find plenty of tutorials/demos that can help you on deploying the ML lifecycle management for such resourceful computing environments. Feel also free to reach out to us for asking additional references.
 
 # UI
-As for the dashboard/user interface deployment, here are a few minimalistic examples and references that can help but feel free to be fancy as you like:
+There are 2 ways of build up UI now:
+1. Build a web app completely with [Streamlit](https://streamlit.io/), or
+2. Build UI with [Pyscript](https://pyscript.net/), backed by [HuggingFace Inference backend server](https://huggingface.co/docs/api-inference/index)
 
-1. [Explainer Dashboard — Build interactive dashboards for Machine learning models](https://medium.com/analytics-vidhya/explainer-dashboard-build-interactive-dashboards-for-machine-learning-models-fda63e0eab9)
-2. [Model Monitoring Dashboards made easy](https://pub.towardsai.net/model-monitoring-dashboards-made-easy-1-3-471b94313b5f)
-3. [Building MLGUI, user interfaces for machine learning applications](https://venturebeat.com/ai/building-mlgui-user-interfaces-for-machine-learning-applications/)
- 
+
 # Why Edge to TinyML (1/2)
 While these demos uses relatively large hardware which may not belong to TinyML strictly (e.g. TinyML should run on RTOS but not on Linux),
 we are gradually migrating to TinyML MCUs. There are 4 benefits of starting with the original setting:
