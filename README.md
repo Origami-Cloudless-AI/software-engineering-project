@@ -44,7 +44,7 @@ toc: false
 Can UI (Dashboard & Control panel) parts be prioritized to meet some milestones?
 
 
-# Project goal (1/2)
+# Project goal
 
 To make things easier, it is recommended that the students start familiarizing with the different concepts of [Machine Learning (ML) lifecycle](https://www.datacamp.com/blog/machine-learning-lifecycle-explained).
 Also, prior jumping in the implementation of the lifecycle management of TinyML-tailored models, it is perhaps a good idea start implementing/executing some of the steps of the original project proposal (e.g., step 2, step 3, step 5, step 6) in a more resourceful computing environment than a microcontroller (MCU). For example, the students could use their own laptop, a cloud environment, or Single-Board Computer (e.g., [Jetson Nano](https://developer.nvidia.com/embedded/jetson-nano-developer-kit))
@@ -52,6 +52,7 @@ Also, prior jumping in the implementation of the lifecycle management of TinyML-
 We will reproduce [Roberto's demo video](https://youtu.be/xYntGeLmCSI), adding its ML training phase, along with TinyML MCU.
 -->
 
+# Tutorial
 The following demos/tutorials can provide an high-level overview on how to deploy the above mentioned steps:
 
 1. [Jetson Nano Custom Object Detection - how to train your own AI](https://www.youtube.com/watch?v=kJpLMBqNcIQ&ab_channel=KevinMcAleer)
@@ -60,12 +61,14 @@ The following demos/tutorials can provide an high-level overview on how to deplo
 
 Please note that online it is possible to find plenty of tutorials/demos that can help you on deploying the ML lifecycle management for such resourceful computing environments. Feel also free to reach out to us for asking additional references.
 
+# UI
 As for the dashboard/user interface deployment, here are a few minimalistic examples and references that can help but feel free to be fancy as you like:
 
 1. [Explainer Dashboard — Build interactive dashboards for Machine learning models](https://medium.com/analytics-vidhya/explainer-dashboard-build-interactive-dashboards-for-machine-learning-models-fda63e0eab9)
 2. [Model Monitoring Dashboards made easy](https://pub.towardsai.net/model-monitoring-dashboards-made-easy-1-3-471b94313b5f)
 3. [Building MLGUI, user interfaces for machine learning applications](https://venturebeat.com/ai/building-mlgui-user-interfaces-for-machine-learning-applications/)
  
+# Why Edge to TinyML (1/2)
 While these demos uses relatively large hardware which may not belong to TinyML strictly (e.g. TinyML should run on RTOS but not on Linux),
 we are gradually migrating to TinyML MCUs. There are 4 benefits of starting with the original setting:
 
@@ -74,7 +77,7 @@ we are gradually migrating to TinyML MCUs. There are 4 benefits of starting with
    - dashboard on a web server
    - Jupyter notebook
 
-# Project goal (2/2)
+# Why Edge to TinyML (2/2)
 2. We could learn from Jetson nano mature tool-stack what kind of tool-stack is still missing to implement TinyMLaaS.
 3. We could start with this existing demo immediately with runnable CI, and
 4. We are polishing it more fancy gradually towards TinyML as-a-Service.
@@ -229,8 +232,8 @@ Scheduled on 16th JAN (MON)
   2. What one wants to do
   3. How one sees this project
 
-## Will explain [Project goal](#project-goal)
-  - We should present [demo video 1](https://youtu.be/xYntGeLmCSI) & [demo video 2](https://www.youtube.com/watch?v=d37narobVG0)
+## Agree on Project goal
+Will explain [Project goal](#project-goal)
 
 # Kick-off meeting Agenda (2/4): SCRUM team
 
@@ -284,14 +287,6 @@ Phase # | Name | Early phase | Demo
 4| Model splitting | Standalone |  Pipelining
 5| Model deployment | Standalone | TBI
 6| Model update | Dashboard | Control panel
-
-
-
-# Remaining questions
-- What's the main purpose of this project from students' perspective? (e.g. experience Agile development)
-- How long can the 16th meeting be allocated? (e.g. 3-4 hours with lunch break)
-- What kind of competency are students generally expected? (e.g. Python, JS, Java, Frontend, Embedded)
-- Can student's weekly working hours be negotiable? (e.g. 15 hours with 14 weeks -> 17.5 hours with 12 weeks)
 
 
 # Contact information
