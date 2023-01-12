@@ -27,8 +27,8 @@ toc: false
 # Basic info (2/2)
 
 ## Milestone
-    1. MWC is at the end of FEB on week 9.
-    2. NEXUS Demo day is on 27th March on week 13.
+    1. Around week 9.
+    2. Around week 13.
 
 ## Project duration:
     1. Originally, 14 weeks, week 3-16
@@ -45,8 +45,28 @@ Can UI (Dashboard & Control panel) parts be prioritized to meet some milestones?
 
 
 # Project goal (1/2)
+
+To make things easier, it is recommended that the students start familiarizing with the different concepts of [Machine Learning (ML) lifecycle](https://www.datacamp.com/blog/machine-learning-lifecycle-explained).
+Also, prior jumping in the implementation of the lifecycle management of TinyML-tailored models, it is perhaps a good idea start implementing/executing some of the steps of the original project proposal (e.g., step 2, step 3, step 5, step 6) in a more resourceful computing environment than a microcontroller (MCU). For example, the students could use their own laptop, a cloud environment, or Single-Board Computer (e.g., [Jetson Nano](https://developer.nvidia.com/embedded/jetson-nano-developer-kit))
+<!---
 We will reproduce [Roberto's demo video](https://youtu.be/xYntGeLmCSI), adding its ML training phase, along with TinyML MCU.
-While this demo uses relatively large hardware which may not belong to TinyML strictly (e.g. TinyML should run on RTOS but not on Linux),
+-->
+
+The following demos/tutorials can provide an high-level overview on how to deploy the above mentioned steps:
+
+1. [Jetson Nano Custom Object Detection - how to train your own AI](https://www.youtube.com/watch?v=kJpLMBqNcIQ&ab_channel=KevinMcAleer)
+2. [Jetson AI Fundamentals - S3E4 - Object Detection Inference](https://www.youtube.com/watch?v=obt60r8ZeB0&list=PL5B692fm6--uQRRDTPsJDp4o0xbzkoyf8&index=12&ab_channel=NVIDIADeveloper)
+3. [Jetson AI Fundamentals - S3E5 - Training Object Detection Models](https://www.youtube.com/watch?v=2XMkPW_sIGg&ab_channel=NVIDIADeveloper)
+
+Please note that online it is possible to find plenty of tutorials/demos that can help you on deploying the ML lifecycle management for such resourceful computing environments. Feel also free to reach out to us for asking additional references.
+
+As for the dashboard/user interface deployment, here are a few minimalistic examples and references that can help but feel free to be fancy as you like:
+
+1. [Explainer Dashboard — Build interactive dashboards for Machine learning models](https://medium.com/analytics-vidhya/explainer-dashboard-build-interactive-dashboards-for-machine-learning-models-fda63e0eab9)
+2. [Model Monitoring Dashboards made easy](https://pub.towardsai.net/model-monitoring-dashboards-made-easy-1-3-471b94313b5f)
+3. [Building MLGUI, user interfaces for machine learning applications](https://venturebeat.com/ai/building-mlgui-user-interfaces-for-machine-learning-applications/)
+ 
+While these demos uses relatively large hardware which may not belong to TinyML strictly (e.g. TinyML should run on RTOS but not on Linux),
 we are gradually migrating to TinyML MCUs. There are 4 benefits of starting with the original setting:
 
 1. Jetson nano is a standalone GPU, where we run the following app locally at once before starting pipe-lining on other nodes.
@@ -133,7 +153,12 @@ Run a small part of ML processing (ML2) as TinyML on MCU.
 ![](images/mvp_004.png){height=85%}
 ::::
 :::
-CLOUD'ification should be done earlier independently to meet early demo (e.g. MWC)
+CLOUD'ification should be done earlier independently to meet early demo (between week 9 and week 13).
+
+<!---
+(e.g. MWC)
+-->
+
 
 
 # MVP4 -> MVP5
