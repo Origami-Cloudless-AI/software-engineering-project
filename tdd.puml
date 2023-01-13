@@ -32,8 +32,8 @@ developer -> repository : submit changes
 package Kumpla {
 package Testbox
 
-WebApp <--->  Testbox : run acceptance Test
-Testbox <-down-> RPI : run acceptance Test
+WebApp <-right->  Testbox : run acceptance Test
+Testbox <-> RPI : run acceptance Test
 
 package Test2 #A9DCDF {
 package Jetson_nano {
