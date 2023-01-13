@@ -8,19 +8,16 @@ cloud Cloud {
 	}
 
 	package UI {
-		(workflow) -down-> (Control panel) : kick CI
-		(Dash board)
+		(workflow) -down-> (WebApp) : kick CI
+		
 	}
 	package Docker_Container {
 		  artifact "ML0"
-		  (Jupyter notebook')
-		  (CV app')
+		  (Jupyter\nnotebook')
 	}
 	collections "GPUs"
-"ML0" -right-> (Jupyter notebook')
-(CV app') -down-> (Jupyter notebook')
-(Jupyter notebook') <-down-> GPUs
-(CV app') <-down- (**mock** cam') : input test images
+"ML0" -right-> (Jupyter\nnotebook')
+(Jupyter\nnotebook') <-down-> GPUs
 }
 
 actor "developer" --left--> (repository) : submit changes
@@ -28,19 +25,14 @@ actor "developer" --left--> (repository) : submit changes
 package Jetson_nano {
 	rectangle {
 		  artifact "ML1"
-		  (Jupyter notebook)
-		  (CV app')
+		  (Jupyter\nnotebook)
 	}
 
-"ML1" -right-> (Jupyter notebook)
-(CV app) -down-> (Jupyter notebook)
-(Jupyter notebook) <-down-> (GPU)
-(CV app) <-down- (**mock** cam) : input test images
+"ML1" -right-> (Jupyter\nnotebook)
+(Jupyter\nnotebook) <-down-> (GPU)
 }
 
-(Control panel) --down--> (CV app) : run acceptance test
-(Control panel) --down--> (CV app') : run acceptance test
-(Control panel) --down--> RPI : run acceptance test
+(WebApp) --down--> RPI : run acceptance test
 
 package RPI {
 	(IP address)

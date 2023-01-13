@@ -3,26 +3,24 @@
 title "MVP0: Standalone ML processing"
 
 package Jetson_nano {
+	collections ML
+	package Train {
+		  (Jupyter\nnotebook)
+	}
 	package UI {
-		(Control panel)
-		(Dash board)
+		(WebApp)
 	}
+	(Jupyter\nnotebook) -> (WebApp) : Streamlit
 
-	rectangle {
-		  collections "ML"
-		  (Jupyter notebook)
-		  (CV app)
-	}
-
-(Control panel) -down-> (CV app)
-
-"ML" -right-> (Jupyter notebook)
-(CV app) -down-> (Jupyter notebook)
-(Jupyter notebook) <-down-> (GPU)
+ML <-down- (Jupyter\nnotebook) : generate
+ML <-down- (WebApp) : use
+(Jupyter\nnotebook) -down-> (GPU) : use
+(WebApp) -down-> (GPU) : use
 }
 
+(Jupyter\nnotebook) <-down- (Sensor) : SPI
+(WebApp) <-down- (Sensor) : SPI
 
-(CV app) <-down- (Camera_sensor) : SPI
 
 '======================================================
 newpage
@@ -30,30 +28,26 @@ newpage
 title "MVP1: Add MCU via SPI to collect data"
 
 package Jetson_nano {
+	collections ML
 	package UI {
-		(Control panel)
-		(Dash board)
+		(WebApp)
 	}
-
-	rectangle {
-		  collections "ML"
-		  (Jupyter notebook)
-		  (CV app)
+	package Train {
+		  (Jupyter\nnotebook)
 	}
-
-(Control panel) -down-> (CV app)
-
-"ML" -right-> (Jupyter notebook)
-(CV app) -down-> (Jupyter notebook)
-(Jupyter notebook) <-down-> (GPU)
+(Jupyter\nnotebook) -> (WebApp) : Streamlit
+ML <-down- (Jupyter\nnotebook) : generate
+ML <-down- (WebApp) : use
+(Jupyter\nnotebook) -down-> (GPU) : use
+(WebApp) -down-> (GPU) : use
 }
 
 package MCU {
-	(SPI USB converter)
+	(Converter)
 }
 
-Jetson_nano <-down- MCU : USB
-MCU <-down- (Camera_sensor) : SPI
+WebApp <-down- Converter : "data\nvia USB"
+Converter <- (Sensor) : SPI
 
 '======================================================
 newpage
@@ -61,22 +55,18 @@ newpage
 title "MVP2: Connect via network"
 
 package Jetson_nano {
+	collections ML
+	package Train {
+		  (Jupyter\nnotebook)
+	}
 	package UI {
-		(Control panel)
-		(Dash board)
+		(WebApp)
 	}
-
-	rectangle {
-		  collections "ML"
-		  (Jupyter notebook)
-		  (CV app)
-	}
-
-(Control panel) -down-> (CV app)
-
-"ML" -right-> (Jupyter notebook)
-(CV app) -down-> (Jupyter notebook)
-(Jupyter notebook) <-down-> (GPU)
+ML <-down- (Jupyter\nnotebook) : generate
+ML <-down- (WebApp) : use
+(Jupyter\nnotebook) -> (WebApp) : Streamlit
+(Jupyter\nnotebook) -down-> (GPU) : use
+(WebApp) -down-> (GPU) : use
 }
 
 package RPI {
@@ -84,12 +74,13 @@ package RPI {
 }
 
 package MCU {
-	(SPI USB converter)
+	(Converter)
 }
 
-Jetson_nano <-down- RPI : network
-RPI <-down- MCU : USB
-MCU <-down- (Camera_sensor) : SPI
+WebApp -down- RPI : network
+RPI <-down- Converter : USB
+
+Converter <- (Sensor) : SPI
 
 
 '======================================================
@@ -98,22 +89,19 @@ newpage
 title "MVP3: Offloading with TinyML"
 
 package Jetson_nano {
+	collections ML
+	package Train {
+		  (Jupyter\nnotebook)
+	}
 	package UI {
-		(Control panel)
-		(Dash board)
+		(WebApp)
+		
 	}
-
-	rectangle {
-		  artifact "ML1"
-		  (Jupyter notebook)
-		  (CV app)
-	}
-
-(Control panel) -down-> (CV app)
-
-"ML1" -right-> (Jupyter notebook)
-(CV app) -down-> (Jupyter notebook)
-(Jupyter notebook) <-down-> (GPU)
+(Jupyter\nnotebook) -> (WebApp) : Streamlit
+ML <-down- (Jupyter\nnotebook) : generate
+ML <-down- WebApp : use
+(Jupyter\nnotebook) -down-> (GPU) : use
+(WebApp) -down-> (GPU) : use
 }
 
 package RPI {
@@ -121,13 +109,13 @@ package RPI {
 }
 
 package MCU {
-        artifact "ML2"
-	ML2 -down-> (TinyML)
+        artifact ML1
+	ML1 -down-> (TinyML)
 }
-
-Jetson_nano <-down- RPI : network
-RPI <-down- MCU : USB
-TinyML <-down- (Camera_sensor) : SPI
+ML .> ML1 : offloading
+WebApp -down- RPI : network
+RPI -down- MCU : USB
+TinyML <- (Sensor) : SPI
 
 '======================================================
 newpage
@@ -136,39 +124,33 @@ title "MVP4: Add Cloud control UI"
 
 cloud Cloud {
 	package UI {
-		(Control panel)
-		(Dash board)
+		(WebApp)
 	}
-
 }
-
 
 package Jetson_nano {
-	rectangle {
-		  artifact "ML1"
-		  (Jupyter notebook)
-		  (CV app)
+	collections ML
+	package Train {
+		  (Jupyter\nnotebook')
 	}
-
-"ML1" -right-> (Jupyter notebook)
-(CV app) -down-> (Jupyter notebook)
-(Jupyter notebook') <-down-> (GPU)
+ML <-down- (Jupyter\nnotebook') : generate
+(Jupyter\nnotebook') -down-> (GPU) : use
 }
-
-(Control panel) --down--> (CV app)
+ML <-up- WebApp : use
 
 package RPI {
 	(IP address)
 }
 
 package MCU {
-        artifact "ML2"
+        artifact ML2
 	ML2 -down-> (TinyML)
 }
+ML .down.>ML2 : offloading
 
-Jetson_nano <-down- RPI : network
-RPI <-down- MCU : USB
-TinyML <-down- (Camera_sensor) : SPI
+WebApp -right-> RPI : use
+RPI -down- MCU : USB
+TinyML <- (Sensor) : SPI
 
 
 '======================================================
@@ -177,35 +159,20 @@ newpage
 title "MVP5: Add Cloud ML"
 
 cloud Cloud {
-	package UI {
-		(Control panel)
-		(Dash board)
-	}
-	rectangle {
-		  artifact "ML0"
-		  (Jupyter notebook')
-		  (CV app')
-	}
-	collections "GPUs"
-"ML0" -right-> (Jupyter notebook')
-(CV app') -down-> (Jupyter notebook')
-(Jupyter notebook') <-down-> GPUs
+      collections ML0
+      package UI {
+      	      (WebApp)
+      }
+      package Train {
+      	      (Jupyter\nnotebook')
+      }
+      collections GPUs
+ML0 <-down- (Jupyter\nnotebook') : generate
+ML0 <-down- WebApp : use
+(Jupyter\nnotebook') -down-> GPUs : use
+WebApp -down-> GPUs : use
+(Jupyter\nnotebook') -> WebApp : streamlit
 }
-
-package Jetson_nano {
-	rectangle {
-		  artifact "ML1"
-		  (Jupyter notebook)
-		  (CV app')
-	}
-
-"ML1" -right-> (Jupyter notebook)
-(CV app) -down-> (Jupyter notebook)
-(Jupyter notebook) <-down-> (GPU)
-}
-
-(Control panel) --down--> (CV app) : network
-(Control panel) --down--> (CV app')
 
 package RPI {
 	(IP address)
@@ -216,94 +183,12 @@ package MCU {
 	ML2 -down-> (TinyML)
 }
 
-Jetson_nano <-down- RPI : network
-RPI <-down- MCU : USB
-TinyML <-down- (Camera_sensor) : SPI
+Cloud -down-> RPI
+RPI -down- MCU : USB
+TinyML <- (Sensor) : SPI
+ML0 .down.> ML2 : offloading
 
-'======================================================
-newpage
-
-title "MVP6: Parallerized ML processing"
-
-cloud Cloud {
-	package UI {
-		(Control panel)
-		(Dash board)
-	}
-	rectangle {
-		  artifact "ML0"
-		  (Jupyter notebook')
-		  (CV app')
-	}
-	collections "GPUs"
-"ML0" -right-> (Jupyter notebook')
-(CV app') -down-> (Jupyter notebook')
-(Jupyter notebook') <-down-> GPUs
-}
-
-package Jetson_nano {
-	rectangle {
-		  artifact "ML1"
-		  (Jupyter notebook)
-		  (CV app')
-	}
-
-"ML1" -right-> (Jupyter notebook)
-(CV app) -down-> (Jupyter notebook)
-(Jupyter notebook) <-down-> (GPU)
-}
-
-(Control panel) --down--> (CV app) : network
-(Control panel) --down--> (CV app')
-(Control panel) --down--> RPI : network
-
-package RPI {
-	(IP address)
-}
-
-package MCU {
-        artifact "ML2"
-	ML2 -down-> (TinyML)
-}
-
-RPI <-down- MCU : USB
-TinyML <-down- (Camera_sensor) : SPI
-
-'======================================================
-newpage
-
-title "MVP7: TinyML as-a-Service"
-
-cloud Cloud {
-	package UI {
-		(Control panel)
-		(Dash board)
-	}
-	rectangle {
-		  artifact "ML0"
-		  (Jupyter notebook')
-		  (CV app')
-	}
-	collections "GPUs"
-"ML0" -right-> (Jupyter notebook')
-(CV app') -down-> (Jupyter notebook')
-(Jupyter notebook') <-down-> GPUs
-}
-
-(Control panel) --down--> (CV app') : network
-(Control panel) --down--> RPI : network
-
-package RPI {
-	(IP address)
-}
-
-package MCU {
-        artifact "ML2"
-	ML2 -down-> (TinyML)
-}
-
-RPI <-down- MCU : USB
-TinyML <-down- (Camera_sensor) : SPI
-
+package Jetson_nano
+WebApp -down-> Jetson_nano
 
 @enduml

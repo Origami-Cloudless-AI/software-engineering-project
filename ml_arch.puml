@@ -30,16 +30,17 @@ cloud Cloud {
 	package Inference {
 	  (WebApp)
 	}
+	collections GPU
 	ML <-down- (WebApp) : use
 	(Jupyter\nnotebook) -> (WebApp) : Streamlit
-	(GPU) <-up- (Jupyter\nnotebook) : use
-	(GPU) <-up- (WebApp) : use
+	GPU <-up- (Jupyter\nnotebook) : use
+	GPU <-up- (WebApp) : use
 }
 
-node IoT
-(Jupyter\nnotebook) <--down-- IoT : "raw data\nvia IP"
-(WebApp) <--down-- IoT : "raw data\nvia IP"
-(Sensor) -> IoT: SPI
+package MCU
+(Jupyter\nnotebook) <--down-- MCU : "raw data\nvia IP"
+(WebApp) <--down-- MCU : "raw data\nvia IP"
+(Sensor) -> MCU: SPI
 
 
 newpage
@@ -53,13 +54,14 @@ cloud "Cloud\n(Optional)" {
       package UI {
 	(WebApp) <-up- ML
       }
+      collections GPU
       (Jupyter\nnotebook) -up-> ML
 ML -> TinyML : squash
 (Jupyter\nnotebook) -> (WebApp) : Streamlit
-(GPU) <-up- (Jupyter\nnotebook) : use
+GPU <-up- (Jupyter\nnotebook) : use
 }
 
-node IoT {
+package MCU {
      Artifact "TinyML'"
 }
 TinyML -down-> "TinyML'" : install
