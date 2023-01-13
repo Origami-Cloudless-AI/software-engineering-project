@@ -1,0 +1,70 @@
+@startuml
+
+package Jetson_nano {
+	package Train {
+	  (Jupyter\nnotebook)
+	}
+	collections "ML"
+	(Jupyter\nnotebook) -up-> ML : generate
+	package Inference {
+	  (WebApp)
+	}
+	ML <-down- (WebApp) : use
+	(Jupyter\nnotebook) -> (WebApp) : Streamlit
+	(GPU) <-up- (Jupyter\nnotebook) : use
+	(GPU) <-up- (WebApp) : use
+}
+(Jupyter\nnotebook) <-down- (Sensor) : "raw data\nvia SPI"
+(WebApp) <-down- (Sensor) : "raw data\nvia SPI"
+
+
+newpage
+
+
+cloud Cloud {
+	package Train {
+	  (Jupyter\nnotebook)
+	}
+	collections "ML"
+	(Jupyter\nnotebook) -up-> ML : generate
+	package Inference {
+	  (WebApp)
+	}
+	ML <-down- (WebApp) : use
+	(Jupyter\nnotebook) -> (WebApp) : Streamlit
+	(GPU) <-up- (Jupyter\nnotebook) : use
+	(GPU) <-up- (WebApp) : use
+}
+
+node IoT
+(Jupyter\nnotebook) <--down-- IoT : "raw data\nvia IP"
+(WebApp) <--down-- IoT : "raw data\nvia IP"
+(Sensor) -> IoT: SPI
+
+
+newpage
+
+cloud "Cloud\n(Optional)" {
+      package train {
+	(Jupyter\nnotebook)
+      }
+      collections "ML"
+      Artifact TinyML
+      package UI {
+	(WebApp) <-up- ML
+      }
+      (Jupyter\nnotebook) -up-> ML
+ML -> TinyML : squash
+(Jupyter\nnotebook) -> (WebApp) : Streamlit
+(GPU) <-up- (Jupyter\nnotebook) : use
+(GPU) <-up- (WebApp) : use
+}
+
+node IoT {
+     Artifact "TinyML'"
+}
+TinyML -down-> "TinyML'" : install
+"TinyML'" ..up..> (WebApp) : "pred\nvia network"
+(Sensor) -down-> "TinyML'" : SPI
+
+@enduml

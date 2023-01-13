@@ -1,0 +1,9 @@
+@startmindmap
+* ML
+**[#lightgreen] Training
+*** 1. Data collection
+**** 1a. Data Labeling
+*** 2. Model training
+**[#yellow] Inference
+*** Data prediction
+@endmindmap

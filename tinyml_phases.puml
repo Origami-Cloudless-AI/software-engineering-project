@@ -1,0 +1,14 @@
+@startmindmap
+* TinyML
+**[#lightgreen] Training
+*** 1. Data collection
+**** 1a. Data labeling
+*** 2. Model training
+**[#lightblue] Cutomization
+*** 3. Model Squeezing
+*** 4. Model splitting
+*** 5. Model deployment
+**** 6. Model update
+**[#yellow] Inference
+*** Data prediction
+@endmindmap
