@@ -45,7 +45,7 @@ toc: false
 
 ![](images/mvp_journey.png){width=100%}
 
-# TDD / CI / CD / Acceptance test
+# ATDD / CI / CD / Acceptance test
 
 ![](images/tdd.png){height=95%}
 
