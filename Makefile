@@ -1,7 +1,7 @@
-all: soft_eng_proj_tinyml_lifecycle.pdf png README.pdf
+all: $(patsubst %.md,%.pdf,$(shell ls *.md))
 
-%.pdf: %.md
-	pandoc --toc --variable urlcolor=blue -s $< -o $@
+%.pdf: %.md png
+	pandoc --toc --variable urlcolor=blue -t beamer -s $< -o $@
 
 %.docx: %.org
 	pandoc --toc --variable urlcolor=blue -s $< -o $@
@@ -14,6 +14,3 @@ png: $(patsubst %.puml,%.png,$(shell ls *.puml))
 
 clean:
 	rm *.pdf
-
-slides:
-	pandoc -t beamer README.md -o README.pdf

@@ -1,58 +1,66 @@
 @startuml
 
-'title "Test 3 environments at once with mock cam"
+'title "Test 3 environments at once with mock sensor"
 
 cloud Cloud {
 	package Github {
-		(workflow) <- (repository) : issue closed
+		storage repository
+		(page)
+		repository -> (workflow): hook
 	}
-
-	package UI {
-		(workflow) -down-> (Control panel) : kick CI
-		(Dash board)
+	package Test1 #fefece {
+	package Container {
+		package UI {
+			(workflow) -down-> (WebApp) : Kick CI/CD
+			WebApp -> page : show results?
+		}
 	}
-	package Docker_Container {
-		  artifact "ML0"
-		  (Jupyter notebook')
-		  (CV app')
+	package Container' {
+		artifact ML0
+		(Jupyter\nnotebook')
 	}
+	(**mock**\nsensor')
 	collections "GPUs"
-"ML0" -right-> (Jupyter notebook')
-(CV app') -down-> (Jupyter notebook')
-(Jupyter notebook') <-down-> GPUs
-(CV app') <-down- (**mock** cam') : input test images
+	}
+ML0 -right-> (Jupyter\nnotebook') : load
+WebApp <-> (Jupyter\nnotebook') :  run acceptance Test
+(Jupyter\nnotebook') -down-> GPUs : use
+(Jupyter\nnotebook') <-down- (**mock**\nsensor') : input test data
+developer -> repository : submit changes
 }
 
-actor "developer" --left--> (repository) : submit changes
+package Kumpla {
+package Testbox
 
+WebApp <--->  Testbox : run acceptance Test
+Testbox <-down-> RPI : run acceptance Test
+
+package Test2 #A9DCDF {
 package Jetson_nano {
 	rectangle {
-		  artifact "ML1"
-		  (Jupyter notebook)
-		  (CV app')
+		  artifact ML1
+		  (Jupyter\nnotebook)
 	}
 
-"ML1" -right-> (Jupyter notebook)
-(CV app) -down-> (Jupyter notebook)
-(Jupyter notebook) <-down-> (GPU)
-(CV app) <-down- (**mock** cam) : input test images
+ML1 -right-> (Jupyter\nnotebook) : load
+Testbox <-down-> (Jupyter\nnotebook) : run acceptance Test
+(Jupyter\nnotebook) -down-> (GPU) : use
+(Jupyter\nnotebook) <-down- (**mock**\nsensor) : input test data
+}
 }
 
-(Control panel) --down--> (CV app) : run acceptance test
-(Control panel) --down--> (CV app') : run acceptance test
-(Control panel) --down--> RPI : run acceptance test
-
+package Test3 #EB937F {
 package RPI {
 	(IP address)
 }
 
 package MCU {
-        artifact "ML2"
-	ML2 -down-> (TinyML)
-	(TinyML) <-down- (**mock** cam'') : input test images 
+        artifact ML2
+	ML2 -> (TinyML) : load
+	(TinyML) <-down- (**mock**\nsensor'') : input test data 
 }
 
-RPI <-down- MCU : USB
-
-
+RPI -down- MCU : USB
+}
+}
 @enduml
