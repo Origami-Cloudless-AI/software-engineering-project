@@ -12,23 +12,38 @@ date: 16/01/2023
 section-titles: false
 toc: false
 ---
-# ML vs TinyML
+# Project goal
 ::: columns
-:::: {.column width=50%}
-## Cloud & Edge ML
-![](images/ml_phases.png){height=100%}
+:::: {.column width=55%}
+_"The main goal of this software engineering project is to develop a solution that enables a seamless **TinyML lifecycle management**.
+In particular, the idea is to build a framework that **in an automated fashion** performs the different steps of the TinyML lifecycle management."_
+
+
 ::::
-:::: {.column width=50%}
-## TinyML
-![](images/tinyml_phases.png){height=80%}
+:::: {.column width=45%}
+![](images/venn.png){height=80%}
 ::::
 :::
 
 
-# Edge ML vs Cloud ML vs TinyML
+# Lifecycle: ML vs TinyML
+::: columns
+:::: {.column width=50%}
+## Cloud & Edge ML
+![](images/lifecycle_ml.png){height=100%}
+::::
+:::: {.column width=50%}
+## TinyML
+![](images/lifecycle_tinyml.png){height=80%}
+::::
+:::
+
+
+# Arch: Edge ML vs Cloud ML vs TinyML
 ::: columns
 :::: {.column width=30%}
 ## Edge ML
+(Local ML)
 ![](images/ml_arch.png){height=100%}
 ::::
 :::: {.column width=30%}
@@ -41,12 +56,19 @@ toc: false
 ::::
 :::
 
+
 # MVP journey
-
+::: columns
+:::: {.column width=65%}
 ![](images/mvp_journey.png){width=100%}
+::::
+:::: {.column width=35%}
+Acceptance Test Driven Development
+![](images/atdd.png){width=120%}
+::::
+:::
 
-# TDD / CI / CD / Acceptance test
-
+# CI / CD / ATDD
 ![](images/tdd.png){height=95%}
 
 # Contact information

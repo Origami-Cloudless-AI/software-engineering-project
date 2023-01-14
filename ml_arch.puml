@@ -37,35 +37,38 @@ cloud Cloud {
 	GPU <-up- (WebApp) : use
 }
 
-package MCU
-(Jupyter\nnotebook) <--down-- MCU : "raw data\nvia IP"
-(WebApp) <--down-- MCU : "raw data\nvia IP"
-(Sensor) -> MCU: SPI
+package MCU {
+	(relay)
+}
+(Jupyter\nnotebook) <--down-- relay : "raw data\nvia IP"
+(WebApp) <--down-- relay : "raw data\nvia IP"
+(Sensor) -> relay : SPI
 
 
 newpage
 
 cloud "Cloud\n(Optional)" {
       package train {
-	(Jupyter\nnotebook)
+      	      (Jupyter\nnotebook)
       }
-      collections "ML"
-      Artifact TinyML
+      collections ML
+      Artifact "Tiny ML"
       package UI {
-	(WebApp) <-up- ML
+      	      (WebApp)
       }
       collections GPU
       (Jupyter\nnotebook) -up-> ML
-ML -> TinyML : squash
+ML -> "Tiny ML" : squash
 (Jupyter\nnotebook) -> (WebApp) : Streamlit
 GPU <-up- (Jupyter\nnotebook) : use
 }
 
 package MCU {
-     Artifact "TinyML'"
+     Artifact TinyML
+     TinyML -> (data) : process
 }
-TinyML -down-> "TinyML'" : install
-"TinyML'" ..up..> (WebApp) : "pred\nvia network"
-(Sensor) -down-> "TinyML'" : SPI
+"Tiny ML" -down-> TinyML : install
+MCU ..up..> (WebApp) : notification
+(Sensor) -down-> data : raw data\nvia SPI
 
 @enduml
