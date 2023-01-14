@@ -1,7 +1,7 @@
 ---
 title: "Seamless TinyML lifecycle management"
 author: "In Software Engineering Project with University of Helsinki CS"
-institute: "[Origami@NEXUS](https://Origami-TinyML.github.io/blog/about.html)"
+institute: "[Origami@NEXUS](https://Origami-TinyML.github.io/blog/about.html): [Hiroshi Doyu](mailto:hiroshi.doyu@gmail.com), [Roberto Morabito](mailto:roberto.morabito@helsinki.fi), [Michihito Mizutani](mailto:michihito.mizutani@gmail.com)"
 theme: "metropolis"
 fonttheme: "default"
 fontsize: 11pt
@@ -79,7 +79,7 @@ The simplest **Test1** can run the [_TFLite micro Hello World_](https://www.tens
 # Automate with TinyMLaaS API
 ::: columns
 :::: {.column width=60%}
-## Open API spec over simple IoT system
+## [OpenAPI](https://www.openapis.org/) spec over simple IoT system
 ![](images/api-server.png){height=100%}
 ::::
 :::: {.column width=40%}
