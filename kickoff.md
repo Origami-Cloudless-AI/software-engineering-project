@@ -1,7 +1,7 @@
 ---
 title: "Seamless TinyML lifecycle management"
 author: "In Software Engineering Project with University of Helsinki CS"
-institute: "[Origami@NEXUS](https://Origami-TinyML.github.io/blog/about.html)"
+institute: "[Origami@NEXUS](https://Origami-TinyML.github.io/blog/about.html): [Hiroshi Doyu](mailto:hiroshi.doyu@gmail.com), [Roberto Morabito](mailto:roberto.morabito@helsinki.fi), [Michihito Mizutani](mailto:michihito.mizutani@gmail.com)"
 theme: "metropolis"
 fonttheme: "default"
 fontsize: 11pt
@@ -59,7 +59,7 @@ In particular, the idea is to build a framework that **in an automated fashion**
 # CI / CD / ATDD
 ![](images/tdd.png){height=85%}
 
-The simplest **Test1** can run the [TFLite micro Hello World](https://www.tensorflow.org/lite/microcontrollers#explore_the_examples) in a container w/o HW.
+The simplest **Test1** can run the [_TFLite micro Hello World_](https://www.tensorflow.org/lite/microcontrollers#explore_the_examples) in a container w/o HW.
 
 
 
@@ -76,21 +76,10 @@ The simplest **Test1** can run the [TFLite micro Hello World](https://www.tensor
 :::
 
 
-# TensorFlow Lite for Microcontrollers[*](https://github.com/tensorflow/tflite-micro/tree/main/tensorflow/lite/micro/examples)
-::: columns
-:::: {.column width=40%}
-## ML model Examples
-![](images/tflm_examples.png){height=70%}
-::::
-:::: {.column width=60%}
-![](images/tflm_hws.png){height=90%}
-::::
-:::
-
 # Automate with TinyMLaaS API
 ::: columns
 :::: {.column width=60%}
-## Open API spec over simple IoT system
+## [OpenAPI](https://www.openapis.org/) spec over simple IoT system
 ![](images/api-server.png){height=100%}
 ::::
 :::: {.column width=40%}
@@ -99,6 +88,23 @@ The simplest **Test1** can run the [TFLite micro Hello World](https://www.tensor
 ::::
 :::
 [Streamlit](https://streamlit.io/) vs [Pyscript](https://pyscript.net/)+[API server](https://huggingface.co/docs/api-inference/index) depends on how to demonstrate user story?
+
+
+# TensorFlow Lite for Microcontrollers[*](https://github.com/tensorflow/tflite-micro/tree/main/tensorflow/lite/micro/examples)
+::: columns
+:::: {.column width=20%}
+## ML model Examples
+![](images/tflm_examples.png){height=70%}
+::::
+:::: {.column width=50%}
+![](images/tflm_hws.png){height=90%}
+::::
+:::: {.column width=30%}
+## [Face-Following Pan/Tilt Stand](https://www.hackster.io/petewarden/face-following-pan-tilt-stand-fe5da6)
+![](images/sensor_mounting_VbOgTcwLx5.png){height=90%}
+::::
+:::
+
 
 # Contact information
 ## [Origami](#Team)
