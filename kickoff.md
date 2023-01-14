@@ -8,8 +8,7 @@ fontsize: 11pt
 urlcolor: red
 linkstyle: bold
 aspectratio: 169
-date: 16/01/2023
-section-titles: false
+date: \today
 toc: false
 ---
 # Project goal
@@ -93,6 +92,7 @@ The simplest **Test1** can run the [TFLite micro Hello World](https://www.tensor
 ![](images/api-server.png){height=100%}
 ::::
 :::: {.column width=40%}
+## Function as-a-Service (FaaS)
 ![](images/demo2-sq.png){height=100%}
 ::::
 :::
