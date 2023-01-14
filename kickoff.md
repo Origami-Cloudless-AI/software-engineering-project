@@ -56,6 +56,13 @@ In particular, the idea is to build a framework that **in an automated fashion**
 :::
 
 
+# CI / CD / ATDD
+![](images/tdd.png){height=85%}
+
+The simplest **Test1** can run the [TFLite micro Hello World](https://www.tensorflow.org/lite/microcontrollers#explore_the_examples) in a container w/o HW.
+
+
+
 # MVP iteration
 ::: columns
 :::: {.column width=65%}
@@ -67,11 +74,6 @@ In particular, the idea is to build a framework that **in an automated fashion**
 ![](images/atdd.png){width=120%}
 ::::
 :::
-
-# CI / CD / ATDD
-![](images/tdd.png){height=85%}
-
-The simplest **Test1** can run the [TFLite micro Hello World](https://www.tensorflow.org/lite/microcontrollers#explore_the_examples) in a container w/o HW.
 
 
 # TensorFlow Lite for Microcontrollers[*](https://github.com/tensorflow/tflite-micro/tree/main/tensorflow/lite/micro/examples)
