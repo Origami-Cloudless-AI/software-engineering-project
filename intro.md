@@ -26,10 +26,10 @@ In particular, the idea is to build a framework that **in an automated fashion**
 :::
 
 
-# Lifecycle: ML vs TinyML
+# Lifecycle of: ML vs TinyML
 ::: columns
 :::: {.column width=50%}
-## Cloud & Edge ML
+## (Cloud) ML
 ![](images/lifecycle_ml.png){height=100%}
 ::::
 :::: {.column width=50%}
@@ -57,19 +57,45 @@ In particular, the idea is to build a framework that **in an automated fashion**
 :::
 
 
-# MVP journey
+# MVP iteration
 ::: columns
 :::: {.column width=65%}
-![](images/mvp_journey.png){width=100%}
+## Always runnable MVP at Day 1
+![](images/mvp_journey.png){width=80%}
 ::::
 :::: {.column width=35%}
-Acceptance Test Driven Development
+## Acceptance Test Driven Development
 ![](images/atdd.png){width=120%}
 ::::
 :::
 
 # CI / CD / ATDD
-![](images/tdd.png){height=95%}
+![](images/tdd.png){height=85%}
+
+The simplest **Test1** can run the [TFLite micro Hello World](https://www.tensorflow.org/lite/microcontrollers#explore_the_examples) in a container w/o HW.
+
+
+# TensorFlow Lite for Microcontrollers[*](https://github.com/tensorflow/tflite-micro/tree/main/tensorflow/lite/micro/examples)
+::: columns
+:::: {.column width=40%}
+## ML model Examples
+![](images/tflm_examples.png){height=70%}
+::::
+:::: {.column width=60%}
+![](images/tflm_hws.png){height=90%}
+::::
+:::
+
+# Automate with TinyMLaaS API
+::: columns
+:::: {.column width=60%}
+## Open API spec over simple IoT system
+![](images/api-server.png){height=100%}
+::::
+:::: {.column width=40%}
+![](images/demo2-sq.png){height=100%}
+::::
+:::
 
 # Contact information
 ## [Origami](#Team)

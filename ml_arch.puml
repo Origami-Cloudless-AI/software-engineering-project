@@ -68,7 +68,7 @@ package MCU {
      TinyML -> (data) : process
 }
 "Tiny ML" -down-> TinyML : install
-MCU ..up..> (WebApp) : notification
+MCU ..up..> (WebApp) : notification\nif needed
 (Sensor) -down-> data : raw data\nvia SPI
 
 @enduml

@@ -24,6 +24,7 @@ cloud Cloud {
 	}
 ML0 -right-> (Jupyter\nnotebook') : load
 WebApp <-> (Jupyter\nnotebook') :  run acceptance Test
+WebApp <. (Jupyter\nnotebook') : register
 (Jupyter\nnotebook') -down-> GPUs : use
 (Jupyter\nnotebook') <-down- (**mock**\nsensor') : input test data
 developer -> repository : submit changes
@@ -48,6 +49,7 @@ Testbox <-down-> (Jupyter\nnotebook) : run acceptance Test
 (Jupyter\nnotebook) <-down- (**mock**\nsensor) : input test data
 }
 }
+Jetson_nano .> WebApp : register
 
 package Test3 #EB937F {
 package RPI {
@@ -59,6 +61,7 @@ package MCU {
 	ML2 -> (TinyML) : load
 	(TinyML) <-down- (**mock**\nsensor'') : input test data 
 }
+MCU .up.> WebApp : register
 
 RPI -down- MCU : USB
 }
