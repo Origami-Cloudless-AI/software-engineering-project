@@ -8,7 +8,7 @@ fontsize: 11pt
 urlcolor: red
 linkstyle: bold
 aspectratio: 169
-date: \today
+date: 16/1/2023
 toc: false
 ---
 # Project goal
@@ -98,6 +98,7 @@ The simplest **Test1** can run the [TFLite micro Hello World](https://www.tensor
 ![](images/demo2-sq.png){height=100%}
 ::::
 :::
+[Streamlit](https://streamlit.io/) vs [Pyscript](https://pyscript.net/)+[API server](https://huggingface.co/docs/api-inference/index) depends on how to demonstrate user story?
 
 # Contact information
 ## [Origami](#Team)
