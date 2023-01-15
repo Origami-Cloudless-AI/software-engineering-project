@@ -109,7 +109,7 @@ The simplest **Test1**: [_TFLite micro Hello World_](https://www.tensorflow.org/
 ![](images/mvp_journey.png){width=90%}
 ::::
 :::: {.column width=60%}
-## ATDD
+## ATDD^[[How to ATDD with Streamlit in Gitlab](https://blog.devgenius.io/testing-streamlit-a1f1fd48ce8f)]
 ![](images/atdd.png){width=110%}
 ::::
 :::
