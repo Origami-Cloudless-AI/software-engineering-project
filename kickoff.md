@@ -73,14 +73,14 @@ from [the original application](https://github.com/Origami-TinyML/software-engin
 ![](images/tflm_hws.png){height=90%}
 ::::
 :::: {.column width=30%}
-## Face-Following Pan/Tilt Stand[*](https://www.hackster.io/petewarden/face-following-pan-tilt-stand-fe5da6)
+Realtime Face-Following Pan/Tilt Stand[*](https://www.hackster.io/petewarden/face-following-pan-tilt-stand-fe5da6)
 ![](images/sensor_mounting_VbOgTcwLx5.png){height=90%}
 ::::
 :::
 
 
 
-# Automate lifecycle with TinyML as-a-Service API
+# Automate lifecycle with TinyML as-a-Service
 ::: columns
 :::: {.column width=60%}
 ## [OpenAPI](https://www.openapis.org/) spec for TinyMLaaS (Old)
@@ -104,47 +104,45 @@ The simplest **Test1**: [_TFLite micro Hello World_](https://www.tensorflow.org/
 
 # MVP iteration
 ::: columns
-:::: {.column width=65%}
-## Always runnable MVP at Day 1
-![](images/mvp_journey.png){width=80%}
+:::: {.column width=40%}
+## Runnable MVP at Day1
+![](images/mvp_journey.png){width=90%}
 ::::
-:::: {.column width=35%}
-## Acceptance Test Driven Development
-![](images/atdd.png){width=120%}
+:::: {.column width=60%}
+## ATDD^[[How to ATDD with Streamlit in Gitlab](https://blog.devgenius.io/testing-streamlit-a1f1fd48ce8f)]
+![](images/atdd.png){width=110%}
 ::::
 :::
 
 
-
-# User story
-_As a [persona], I [want to], [so that]_
-
+# User story: _As a [persona], I [want to], [so that]_
 ::: columns
 :::: {.column width=50%}
-- As a Data Scientist at training,
-  - I want to collect data to train
-    - I want to label data to train
-  - I want to train models to use devices
-  - I want to store models to assign
-- As a on-site IT operator,
-  - I want to register:
-    - IoT devices to observe
-    - models to update
-    - toolchain to compile
-  - I want control panel:
-    - to assign models
-    - to build ML pipelines
+## As a Data Scientist, at training,
+- I want to collect data to train
+  - I want to label data to train
+- I want to train models to use devices
+- I want to store models to assign
+
+## As a on-site IT operator,
+- I want to register:
+  - IoT devices to observe
+  - models to update
+  - toolchain to compile
+- I want a control panel:
+  - to assign models
+  - to build ML pipelines
 ::::
 :::: {.column width=50%}
-- As a CFO,
-  - I want to compare Cloud vs TinyML for cost
-  - I want to pipeline Cloud & TinyML for flexibility
-- As a CEO,
-  - I want dashboard to observe devices
-- As a CTO,
-  - I want automated dry-run of a whole lifecycle to reject support requests
+## As a Tech support, I want:
+- a dashboard to observe devices
+- automated dry-run of a whole lifecycle to sort support requests
 
-.... e.t.c
+## As a Financial, I want to:
+- compare Cloud vs TinyML in cost
+- pipeline Cloud & TinyML for flexibility
+
+.....
 ::::
 :::
 
