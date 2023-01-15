@@ -11,11 +11,18 @@ aspectratio: 169
 date: 16/1/2023
 toc: false
 ---
+# Who we are, Origami[*](https://www.mindmeister.com/map/2547854225)
+![](images/team.png){height=100%}
+
+
 # Project goal
 ::: columns
 :::: {.column width=55%}
 _"The main goal of this software engineering project is to develop a solution that enables a seamless **TinyML lifecycle management**.
-In particular, the idea is to build a framework that **in an automated fashion** performs the different steps of the TinyML lifecycle management."_ from the original proposal[*]()
+In particular, the idea is to build a framework that **in an automated fashion** performs the different steps of the TinyML lifecycle management."_,
+
+
+from [the original application](https://github.com/Origami-TinyML/software-engineering-project/blob/artifacts/soft_eng_proj_tinyml_lifecycle.md)
 
 
 ::::
@@ -100,7 +107,7 @@ TinyMLaaS orchestrates TinyML on _**any IoT system**_.
 ![](images/tflm_hws.png){height=90%}
 ::::
 :::: {.column width=30%}
-## [Face-Following Pan/Tilt Stand](https://www.hackster.io/petewarden/face-following-pan-tilt-stand-fe5da6)
+## Face-Following Pan/Tilt Stand[*](https://www.hackster.io/petewarden/face-following-pan-tilt-stand-fe5da6)
 ![](images/sensor_mounting_VbOgTcwLx5.png){height=90%}
 ::::
 :::
@@ -126,8 +133,8 @@ _As a [persona], I [want to], [so that]_
 ::::
 :::: {.column width=50%}
 - As a CFO,
-  - I want to compare Cloud vs TinyML to choose
-  - I want to pipeline Cloud & TinyML for cost
+  - I want to compare Cloud vs TinyML for cost
+  - I want to pipeline Cloud & TinyML for flexibility
 - As a CEO,
   - I want dashboard to observe devices
 - As a CTO,
