@@ -104,19 +104,18 @@ The simplest **Test1**: [_TFLite micro Hello World_](https://www.tensorflow.org/
 
 # MVP iteration
 ::: columns
-:::: {.column width=65%}
-## Always runnable MVP at Day 1
-![](images/mvp_journey.png){width=80%}
+:::: {.column width=40%}
+## Runnable MVP at Day1
+![](images/mvp_journey.png){width=90%}
 ::::
-:::: {.column width=35%}
-## Acceptance Test Driven Development
-![](images/atdd.png){width=120%}
+:::: {.column width=60%}
+## ATDD
+![](images/atdd.png){width=110%}
 ::::
 :::
 
 
-
-# User story
+# User story: _As a [persona], I [want to], [so that]_
 ::: columns
 :::: {.column width=50%}
 ## As a Data Scientist, at training,
@@ -143,10 +142,7 @@ The simplest **Test1**: [_TFLite micro Hello World_](https://www.tensorflow.org/
 - compare Cloud vs TinyML in cost
 - pipeline Cloud & TinyML for flexibility
 
-
------
-_As a [persona], I [want to], [so that]_
------
+.....
 ::::
 :::
 
