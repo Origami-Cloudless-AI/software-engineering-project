@@ -63,6 +63,38 @@ from [the original application](https://github.com/Origami-TinyML/software-engin
 :::
 
 
+# TensorFlow Lite for Microcontrollers[*](https://github.com/tensorflow/tflite-micro/tree/main/tensorflow/lite/micro/examples)
+::: columns
+:::: {.column width=20%}
+## ML model Examples
+![](images/tflm_examples.png){height=70%}
+::::
+:::: {.column width=50%}
+![](images/tflm_hws.png){height=90%}
+::::
+:::: {.column width=30%}
+## Face-Following Pan/Tilt Stand[*](https://www.hackster.io/petewarden/face-following-pan-tilt-stand-fe5da6)
+![](images/sensor_mounting_VbOgTcwLx5.png){height=90%}
+::::
+:::
+
+
+
+# Automate lifecycle with TinyML as-a-Service API
+::: columns
+:::: {.column width=60%}
+## [OpenAPI](https://www.openapis.org/) spec for TinyMLaaS (Old)
+![](images/api-server.png){height=100%}
+::::
+:::: {.column width=40%}
+## Function as-a-Service (FaaS)
+![](images/demo2-sq.png){height=100%}
+::::
+:::
+TinyMLaaS orchestrates TinyML on _**any IoT system**_.
+
+
+
 # CI / CD / ATDD
 ![](images/tdd.png){height=85%}
 
@@ -83,41 +115,13 @@ The simplest **Test1**: [_TFLite micro Hello World_](https://www.tensorflow.org/
 :::
 
 
-# Automate with TinyML as-a-Service API
-::: columns
-:::: {.column width=60%}
-## [OpenAPI](https://www.openapis.org/) spec for TinyMLaaS (Old)
-![](images/api-server.png){height=100%}
-::::
-:::: {.column width=40%}
-## Function as-a-Service (FaaS)
-![](images/demo2-sq.png){height=100%}
-::::
-:::
-TinyMLaaS orchestrates TinyML on _**any IoT system**_.
-
-
-# TensorFlow Lite for Microcontrollers[*](https://github.com/tensorflow/tflite-micro/tree/main/tensorflow/lite/micro/examples)
-::: columns
-:::: {.column width=20%}
-## ML model Examples
-![](images/tflm_examples.png){height=70%}
-::::
-:::: {.column width=50%}
-![](images/tflm_hws.png){height=90%}
-::::
-:::: {.column width=30%}
-## Face-Following Pan/Tilt Stand[*](https://www.hackster.io/petewarden/face-following-pan-tilt-stand-fe5da6)
-![](images/sensor_mounting_VbOgTcwLx5.png){height=90%}
-::::
-:::
 
 # User story
 _As a [persona], I [want to], [so that]_
 
 ::: columns
 :::: {.column width=50%}
-- As a Data Scientist,
+- As a Data Scientist at training,
   - I want to collect data to train
     - I want to label data to train
   - I want to train models to use devices
