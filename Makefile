@@ -1,7 +1,10 @@
 all: $(patsubst %.md,%.pdf,$(shell ls *.md))
 
+kickoff.pdf: kickoff.md
+	pandoc -t beamer -s $< -o $@
+
 %.pdf: %.md png
-	pandoc --toc --variable urlcolor=blue -t beamer -s $< -o $@
+	pandoc --toc --variable urlcolor=blue -s $< -o $@
 
 %.docx: %.org
 	pandoc --toc --variable urlcolor=blue -s $< -o $@

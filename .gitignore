@@ -1,4 +1,6 @@
 *~
 *.pdf
-images/*.png
-
+images/lifecycle*.png
+images/ml_arch*.png
+images/mvp*.png
+images/tdd.png
