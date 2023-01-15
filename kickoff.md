@@ -15,7 +15,7 @@ toc: false
 ::: columns
 :::: {.column width=55%}
 _"The main goal of this software engineering project is to develop a solution that enables a seamless **TinyML lifecycle management**.
-In particular, the idea is to build a framework that **in an automated fashion** performs the different steps of the TinyML lifecycle management."_
+In particular, the idea is to build a framework that **in an automated fashion** performs the different steps of the TinyML lifecycle management."_ from the original proposal[*]()
 
 
 ::::
@@ -59,7 +59,7 @@ In particular, the idea is to build a framework that **in an automated fashion**
 # CI / CD / ATDD
 ![](images/tdd.png){height=85%}
 
-The simplest **Test1** can run the [_TFLite micro Hello World_](https://www.tensorflow.org/lite/microcontrollers#explore_the_examples) in a container w/o HW.
+The simplest **Test1**: [_TFLite micro Hello World_](https://www.tensorflow.org/lite/microcontrollers#explore_the_examples) in x86 container w/o HW.
 
 
 
@@ -76,10 +76,10 @@ The simplest **Test1** can run the [_TFLite micro Hello World_](https://www.tens
 :::
 
 
-# Automate with TinyMLaaS API
+# Automate with TinyML as-a-Service API
 ::: columns
 :::: {.column width=60%}
-## [OpenAPI](https://www.openapis.org/) spec over simple IoT system
+## [OpenAPI](https://www.openapis.org/) spec for TinyMLaaS (Old)
 ![](images/api-server.png){height=100%}
 ::::
 :::: {.column width=40%}
@@ -87,7 +87,7 @@ The simplest **Test1** can run the [_TFLite micro Hello World_](https://www.tens
 ![](images/demo2-sq.png){height=100%}
 ::::
 :::
-[Streamlit](https://streamlit.io/) vs [Pyscript](https://pyscript.net/)+[API server](https://huggingface.co/docs/api-inference/index) depends on how to demonstrate user story?
+TinyMLaaS orchestrates TinyML on _**any IoT system**_.
 
 
 # TensorFlow Lite for Microcontrollers[*](https://github.com/tensorflow/tflite-micro/tree/main/tensorflow/lite/micro/examples)
@@ -102,6 +102,38 @@ The simplest **Test1** can run the [_TFLite micro Hello World_](https://www.tens
 :::: {.column width=30%}
 ## [Face-Following Pan/Tilt Stand](https://www.hackster.io/petewarden/face-following-pan-tilt-stand-fe5da6)
 ![](images/sensor_mounting_VbOgTcwLx5.png){height=90%}
+::::
+:::
+
+# User story
+_As a [persona], I [want to], [so that]_
+
+::: columns
+:::: {.column width=50%}
+- As a Data Scientist,
+  - I want to collect data to train
+    - I want to label data to train
+  - I want to train models to use devices
+  - I want to store models to assign
+- As a on-site IT operator,
+  - I want to register:
+    - IoT devices to observe
+    - models to update
+    - toolchain to compile
+  - I want control panel:
+    - to assign models
+    - to build ML pipelines
+::::
+:::: {.column width=50%}
+- As a CFO,
+  - I want to compare Cloud vs TinyML to choose
+  - I want to pipeline Cloud & TinyML for cost
+- As a CEO,
+  - I want dashboard to observe devices
+- As a CTO,
+  - I want automated dry-run of a whole lifecycle to reject support requests
+
+.... e.t.c
 ::::
 :::
 
